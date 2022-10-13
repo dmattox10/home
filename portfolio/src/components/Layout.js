@@ -1,7 +1,6 @@
 import LColumn from './LColumn'
 import RColumn from './RColumn'
 import Header from './Header'
-import Footer from './Footer'
 import Content from './Content'
 
 const Layout = (props) => {

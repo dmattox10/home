@@ -1,5 +1,6 @@
 # Build
 FROM node:16-alpine AS build
+ARG PORT
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN REACT_APP_PORT=${PORT} \
