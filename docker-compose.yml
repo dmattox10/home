@@ -6,11 +6,14 @@ services:
     build:
       context: ./portfolio/
       dockerfile: dockerfile
+      args:
+      - PORT=${PORT}
     image: portfolio
     hostname: portfolio
+    container_name: portfolio
     command: yarn start
     volumes:
       - ./:/usr/app
       - /usr/app/node_modules
     ports:
-      - "3434:3000"
+      - "${PORT}:${PORT}"
