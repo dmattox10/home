@@ -8,17 +8,17 @@ const Layout = (props) => {
 
     return (
         <div className='grid'>
-            <article className='nodule desktop-12 tablet-12'>
+            <article className='module desktop-12 tablet-12'>
                 <Header />
             </article>
             <article className='module desktop-2 tablet-4 col'>
-                <LColumn />
+                <LColumn id='primary' />
             </article>
             <article className='module desktop-8 tablet-8'>
                 <Content />
             </article>
             <article className='module desktop-2 tablet-4 col'>
-                <RColumn />
+                <RColumn  id='secondary' />
             </article>
         </div>
     )

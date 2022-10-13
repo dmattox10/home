@@ -49,9 +49,9 @@ const Header = (props) => {
                         <li
                         key={item.id}
                         onClick={() => setActive(item.id)}
-                        className={`nav-item ${active == item.id && 'active'}`}
+                        className={`nav-item`}
                         >
-                            <AnchorLink offset={() => 100} className='nav-link' href={item.target}>{item.name}</AnchorLink>
+                            <AnchorLink offset={() => 100} className={`nav-link ${active === item.id && 'active'}`} href={item.target}>{item.name}</AnchorLink>
                         </li>
                     )
                     })}
