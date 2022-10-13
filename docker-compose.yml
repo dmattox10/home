@@ -1,0 +1,16 @@
+---
+version: '3.7'
+
+services:
+  portfolio:
+    build:
+      context: ./portfolio/
+      dockerfile: dockerfile
+    image: portfolio
+    hostname: portfolio
+    command: yarn start
+    volumes:
+      - ./:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3434:3000"
