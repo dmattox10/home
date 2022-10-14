@@ -43,18 +43,24 @@ const Header = (props) => {
         <nav className="navbar navbar-expand-md fixed-top navbarScroll">
         <div className="container-md">
             <AnchorLink className="navbar-brand" href="#">MX</AnchorLink>
-            <button 
-            className="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" 
-            aria-expanded={!isNavCollapsed ? true : false} 
-            aria-label="Toggle navigation"
-            onClick={handleNavCollapse}
-            >
-                <span className="navbar-toggler-icon"></span>
-            </button>
+                <button 
+                className='navbar-toggler bento-menu'
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded={!isNavCollapsed ? true : false} 
+                aria-label="Toggle navigation"
+                onClick={handleNavCollapse}>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'></span>
+	            </button>
             <div
             className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}
             id="navbarSupportedContent"

@@ -1,3 +1,5 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 $nord0: #2E3440;
 $nord1: #3B4252;
 $nord2: #434C5E;
@@ -30,7 +32,7 @@ $nord15: #B48EAD;
 }
 
 html {
-  font-size: 88.5%;
+  font-size: 92%;
 }
 
 body {
@@ -91,6 +93,17 @@ nav {
 
 a.navbar-brand {
     color:#D8DEE9;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.navbar-toggler:focus {
+    box-shadow: unset;
+    border: unset;
+}
+
+.navbar-toggler-icon:focus {
+    box-shadow: unset;
 }
 
 a.nav-link {
@@ -226,6 +239,18 @@ li.nav-item:nth-child(4n) a.nav-link.active {
   clear: both;
 }
 
+@include media-breakpoint-down(md) {
+    li.nav-item {
+        a.nav-link {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+
 @media only screen and (max-width: 540px) {
   #primary {
     display: none;
@@ -330,4 +355,105 @@ li.nav-item:nth-child(4n) a.nav-link.active {
 .res-image {
     width: 100%;
     height: auto;
+}
+
+.bento-menu{
+	width: 33px;
+	height: 33px;
+	position: absolute;
+	top: 50%;
+	right: 2%;
+	transform: translateY(-50%);
+}
+.bento-menu span{
+	width: 10px;
+	height: 10px;
+	background: $nord4;
+    border: 2px solid;
+    border-color: $nord3;
+    border-radius: 50%; 
+	position: absolute;
+}
+.bento-menu span:nth-child(1){
+	top: 0;
+	left: 0;
+	transition: .8s;
+}
+.bento-menu span:nth-child(2){
+	top: 0;
+	left: 11px;
+	transition: .8s;
+}
+.bento-menu span:nth-child(3){
+	top: 0;
+	left: 22px;
+	transition: .8s;
+}
+.bento-menu span:nth-child(4){
+	top: 11px;
+	left: 0;
+	transition: .8s;
+}
+.bento-menu span:nth-child(5){
+	top: 11px;
+	left: 11px;
+	transition: .8s;
+}
+.bento-menu span:nth-child(6){
+	top: 11px;
+	left: 22px;
+	transition: .8s;
+}
+.bento-menu span:nth-child(7){
+	top: 22px;
+	left: 0;
+	transition: .8s;
+}
+.bento-menu span:nth-child(8){
+	top: 22px;
+	left: 11px;
+	transition: .8s;
+}
+.bento-menu span:nth-child(9){
+	top: 22px;
+	left: 22px;
+	transition: .8s;
+}
+.bento-menu:hover span:nth-child(1){
+	transform: translate(11px,11px);
+    background-color: transparent;
+    border-color: transparent;
+}
+.bento-menu:hover span:nth-child(3){
+	transform: translate(-11px,11px);
+    background-color: transparent;
+    border-color: transparent;
+}
+.bento-menu:hover span:nth-child(7){
+	transform: translate(11px,-11px);
+    background-color: transparent;
+    border-color: transparent;
+}
+.bento-menu:hover span:nth-child(9){
+	transform: translate(-11px,-11px);
+    background-color: transparent;
+    border-color: transparent;
+}
+.bento-menu:hover span:nth-child(2){
+	transform: rotate(180deg);
+    background-color: #88C0D0;
+
+}
+.bento-menu:hover span:nth-child(4){
+	transform: rotate(180deg);
+    background-color: #EBCB8B;
+}
+.bento-menu:hover span:nth-child(6){
+	transform: rotate(-180deg);
+    background-color: #BF616A;
+
+}
+.bento-menu:hover span:nth-child(8){
+	transform: rotate(-180deg);
+    background-color: #A3BE8C;
 }
