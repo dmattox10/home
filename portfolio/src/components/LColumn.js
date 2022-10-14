@@ -2,7 +2,7 @@ const LColumn = (props) => {
 
     return (
 
-        <div className=''>
+        <div id='primary' className=''>
             Column
         </div>
     )

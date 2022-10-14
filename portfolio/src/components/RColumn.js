@@ -2,7 +2,7 @@ const RContent = (props) => {
 
     return (
 
-        <div className=''>
+        <div id='secondary' className=''>
             Column
         </div>
     )
