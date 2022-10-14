@@ -3,6 +3,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Header = (props) => {
 
     const [active, updateActive] = useState(0)
+
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     
     const setActive = (id) => {
         updateActive(prevState => id)
@@ -39,10 +43,22 @@ const Header = (props) => {
         <nav className="navbar navbar-expand-md fixed-top navbarScroll">
         <div className="container-md">
             <AnchorLink className="navbar-brand" href="#">MX</AnchorLink>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded={!isNavCollapsed ? true : false} 
+            aria-label="Toggle navigation"
+            onClick={handleNavCollapse}
+            >
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div
+            className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}
+            id="navbarSupportedContent"
+            >
                 <ul className="navbar-nav ms-auto">
                 {navItems.map((item) => {
                     return (
@@ -51,7 +67,10 @@ const Header = (props) => {
                         onClick={() => setActive(item.id)}
                         className={`nav-item`}
                         >
-                            <AnchorLink offset={() => 100} className={`nav-link ${active === item.id && 'active'}`} href={item.target}>{item.name}</AnchorLink>
+                            <AnchorLink 
+                                offset={() => 100} 
+                                className={`nav-link ${active === item.id && 'active'}`} 
+                                href={item.target}>{item.name}</AnchorLink>
                         </li>
                     )
                     })}

@@ -322,3 +322,12 @@ li.nav-item:nth-child(4n) a.nav-link.active {
   display: block;
   clear: both;
 }
+
+.round-image {
+    border-radius: 50%;
+}
+
+.res-image {
+    width: 100%;
+    height: auto;
+}
