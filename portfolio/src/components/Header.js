@@ -52,13 +52,13 @@ const Header = (props) => {
                 aria-label="Toggle navigation"
                 onClick={handleNavCollapse}>
                     <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'><p>Y</p></span>
                     <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'><p>X</p></span>
                     <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'><p>B</p></span>
                     <span className='navbar-toggler-icon'></span>
-                    <span className='navbar-toggler-icon'></span>
-                    <span className='navbar-toggler-icon'></span>
-                    <span className='navbar-toggler-icon'></span>
-                    <span className='navbar-toggler-icon'></span>
+                    <span className='navbar-toggler-icon'><p>A</p></span>
                     <span className='navbar-toggler-icon'></span>
 	            </button>
             <div

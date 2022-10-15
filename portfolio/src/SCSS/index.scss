@@ -1,5 +1,5 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
+@import url(http://fonts.googleapis.com/css2?family=Silkscreen);
 $nord0: #2E3440;
 $nord1: #3B4252;
 $nord2: #434C5E;
@@ -23,6 +23,8 @@ $nord15: #B48EAD;
   font-weight: 700;
   src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aX8.ttf) format('truetype');
 }
+
+$silkscreen: 'Silkscreen';
 
 * {
   margin: 0;
@@ -357,22 +359,29 @@ li.nav-item:nth-child(4n) a.nav-link.active {
     height: auto;
 }
 
+$total: 42px;
+$size: calc($total / 3) - 1;
+$offset: calc($total / 3);
+
 .bento-menu{
-	width: 33px;
-	height: 33px;
+	width: $total;
+	height: $total;
 	position: absolute;
 	top: 50%;
 	right: 2%;
 	transform: translateY(-50%);
 }
 .bento-menu span{
-	width: 10px;
-	height: 10px;
+    color: $nord4;
+	width: $size;
+	height: $size;
 	background: $nord4;
-    border: 2px solid;
+    border: 1px solid;
     border-color: $nord3;
     border-radius: 50%; 
 	position: absolute;
+    font-family: $silkscreen;
+    font-size: 50%;
 }
 .bento-menu span:nth-child(1){
 	top: 0;
@@ -381,79 +390,84 @@ li.nav-item:nth-child(4n) a.nav-link.active {
 }
 .bento-menu span:nth-child(2){
 	top: 0;
-	left: 11px;
+	left: $offset;
 	transition: .8s;
 }
 .bento-menu span:nth-child(3){
 	top: 0;
-	left: 22px;
+	left: $offset * 2;
 	transition: .8s;
 }
 .bento-menu span:nth-child(4){
-	top: 11px;
+	top: $offset;
 	left: 0;
 	transition: .8s;
 }
 .bento-menu span:nth-child(5){
-	top: 11px;
-	left: 11px;
+	top: $offset;
+	left: $offset;
 	transition: .8s;
 }
 .bento-menu span:nth-child(6){
-	top: 11px;
-	left: 22px;
+	top: $offset;
+	left: $offset * 2;
 	transition: .8s;
 }
 .bento-menu span:nth-child(7){
-	top: 22px;
+	top: $offset * 2;
 	left: 0;
 	transition: .8s;
 }
 .bento-menu span:nth-child(8){
-	top: 22px;
-	left: 11px;
+	top: $offset * 2;
+	left: $offset;
 	transition: .8s;
 }
 .bento-menu span:nth-child(9){
-	top: 22px;
-	left: 22px;
+	top: $offset * 2;
+	left: $offset * 2;
 	transition: .8s;
 }
 .bento-menu:hover span:nth-child(1){
-	transform: translate(11px,11px);
+	transform: translate($offset,$offset);
     background-color: transparent;
     border-color: transparent;
 }
 .bento-menu:hover span:nth-child(3){
-	transform: translate(-11px,11px);
+	transform: translate(-$offset,$offset);
     background-color: transparent;
     border-color: transparent;
 }
+.bento-menu:hover span:nth-child(5) {
+    display: none;
+}
 .bento-menu:hover span:nth-child(7){
-	transform: translate(11px,-11px);
+	transform: translate($offset,-$offset);
     background-color: transparent;
     border-color: transparent;
 }
 .bento-menu:hover span:nth-child(9){
-	transform: translate(-11px,-11px);
+	transform: translate(-$offset,-$offset);
     background-color: transparent;
     border-color: transparent;
 }
 .bento-menu:hover span:nth-child(2){
-	transform: rotate(180deg);
+	// transform: rotate(180deg);
     background-color: #88C0D0;
-
+    color:$nord0;
 }
 .bento-menu:hover span:nth-child(4){
-	transform: rotate(180deg);
+	// transform: rotate(180deg);
     background-color: #EBCB8B;
+    color:$nord0;
 }
 .bento-menu:hover span:nth-child(6){
-	transform: rotate(-180deg);
+	// transform: rotate(-180deg);
     background-color: #BF616A;
-
+    color:$nord0;
 }
 .bento-menu:hover span:nth-child(8){
-	transform: rotate(-180deg);
+	// transform: rotate(-180deg);
     background-color: #A3BE8C;
+    color:$nord0;
 }
