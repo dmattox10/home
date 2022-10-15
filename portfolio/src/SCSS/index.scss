@@ -30,6 +30,7 @@ $silkscreen: 'Silkscreen';
   margin: 0;
   padding: 0;
   border: 0px none;
+  border-color: unset;
   box-sizing: border-box;
 }
 
@@ -90,7 +91,7 @@ footer {
 }
 
 nav {
-    background-color: #5E81AC;
+    background-color: $nord10;
 }
 
 a.navbar-brand {
@@ -99,13 +100,16 @@ a.navbar-brand {
     font-weight: bold;
 }
 
-.navbar-toggler:focus {
+.navbar-toggler {
     box-shadow: unset;
     border: unset;
+    border-color: $nord10;
 }
 
-.navbar-toggler-icon:focus {
+.navbar-toggler-icon {
     box-shadow: unset;
+    border: unset;
+    border-color: $nord10;
 }
 
 a.nav-link {
