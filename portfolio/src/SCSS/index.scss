@@ -112,6 +112,18 @@ a.navbar-brand {
     border-color: $nord10;
 }
 
+.navbar-toggler:focus {
+    box-shadow: unset;
+    border: unset;
+    border-color: $nord10;
+}
+
+.navbar-toggler-icon:focus {
+    box-shadow: unset;
+    border: unset;
+    border-color: $nord10;
+}
+
 a.nav-link {
     color:#D8DEE9;
     display: unset;
