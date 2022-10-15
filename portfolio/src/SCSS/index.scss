@@ -112,6 +112,14 @@ a.navbar-brand {
     border-color: $nord10;
 }
 
+.navbar-toggler-icon p {
+    -moz-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -ms-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+
 .navbar-toggler:focus {
     box-shadow: unset;
     border: unset;
@@ -268,16 +276,6 @@ li.nav-item:nth-child(4n) a.nav-link.active {
     }
 }
 
-
-@media only screen and (max-width: 540px) {
-  #primary {
-    display: none;
-  }
-  #secondary {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 482px) {
   .tablet-1 {
     width: 6.33333333%;
@@ -318,6 +316,7 @@ li.nav-item:nth-child(4n) a.nav-link.active {
 }
 
 @media only screen and (min-width: 1024px) {
+    
   .desktop-1 {
     width: 6.33333333%;
   }
@@ -397,7 +396,7 @@ $offset: calc($total / 3);
     border-radius: 50%; 
 	position: absolute;
     font-family: $silkscreen;
-    font-size: 50%;
+    font-size: 55%;
 }
 .bento-menu span:nth-child(1){
 	top: 0;
@@ -468,22 +467,34 @@ $offset: calc($total / 3);
     border-color: transparent;
 }
 .bento-menu:hover span:nth-child(2){
-	// transform: rotate(180deg);
-    background-color: #88C0D0;
+    p {
+        padding-bottom: px;
+    }
+	transform: rotate(180deg);
+    background-color: #A3BE8C;
     color:$nord0;
 }
 .bento-menu:hover span:nth-child(4){
-	// transform: rotate(180deg);
+    p {
+        padding-bottom: 1px;
+    }
+	transform: rotate(180deg);
     background-color: #EBCB8B;
     color:$nord0;
 }
 .bento-menu:hover span:nth-child(6){
-	// transform: rotate(-180deg);
+    p {
+        padding-bottom: 1px;
+    }
+	transform: rotate(-180deg);
     background-color: #BF616A;
     color:$nord0;
 }
 .bento-menu:hover span:nth-child(8){
-	// transform: rotate(-180deg);
-    background-color: #A3BE8C;
+    p {
+        padding-bottom: 1px;
+    }
+	transform: rotate(-180deg);
+    background-color: #88C0D0;
     color:$nord0;
 }
