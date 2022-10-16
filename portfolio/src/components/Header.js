@@ -14,27 +14,27 @@ const Header = (props) => {
 
     const navItems = [
         {
-            id: 0,
+            id: 1,
             name: 'About',
             target: '#about'
         },
         {
-            id: 1,
+            id: 2,
             name: 'Work',
             target: '#work'
         },
         {
-            id: 2,
+            id: 3,
             name: 'Experience',
             target: '#experience'
         },
         {
-            id: 3,
+            id: 4,
             name: 'Contact',
             target: '#contact'
         },
         {
-            id: 4,
+            id: 5,
             name: 'Resume',
             target: '#resume'
         }
