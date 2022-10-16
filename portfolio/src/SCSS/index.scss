@@ -17,6 +17,10 @@ $nord13: #EBCB8B;
 $nord14: #A3BE8C;
 $nord15: #B48EAD;
 
+$section-height: 120vh;
+$num-sections: 5;
+$side-height: $num-sections * $section-height;
+
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -46,7 +50,7 @@ body {
 }
 
 section {
-    height: 100vh;
+    height: 120vh;
 }
 
 #container {
@@ -62,7 +66,7 @@ section {
 #primary {
   float: left;
   width: 25vw;
-  height: 500vh;
+  height: $side-height;
 }
   
 #content {
@@ -73,7 +77,7 @@ section {
 #secondary {
   float: left;
   width: 25vw;
-  height: 500vh;
+  height: $side-height;
 }
   
 #footer {

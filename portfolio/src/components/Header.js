@@ -1,46 +1,14 @@
 import { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Header = (props) => {
-
-    const [active, updateActive] = useState(0)
+    const {navItems, activeItem, setActive} = props
 
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     
-    const setActive = (id) => {
-        updateActive(prevState => id)
-    }
-
-    const navItems = [
-        {
-            id: 1,
-            name: 'About',
-            target: '#about'
-        },
-        {
-            id: 2,
-            name: 'Work',
-            target: '#work'
-        },
-        {
-            id: 3,
-            name: 'Experience',
-            target: '#experience'
-        },
-        {
-            id: 4,
-            name: 'Contact',
-            target: '#contact'
-        },
-        {
-            id: 5,
-            name: 'Resume',
-            target: '#resume'
-        }
-    ]
     return (
-        <nav className="navbar navbar-expand-md fixed-top navbarScroll">
+        <nav className="navbar navbar-expand-md fixed-top sticky navbarScroll">
         <div className="container-md">
             <AnchorLink className="navbar-brand" href="#">MX</AnchorLink>
                 <button 
@@ -75,8 +43,8 @@ const Header = (props) => {
                         >
                             <AnchorLink 
                                 offset={() => 100} 
-                                className={`nav-link ${active === item.id && 'active'}`} 
-                                href={item.target}>{item.name}</AnchorLink>
+                                className={`nav-link ${activeItem === item.id && 'active'}`} 
+                                href={`#${item.target}`}>{item.name}</AnchorLink>
                         </li>
                     )
                     })}
