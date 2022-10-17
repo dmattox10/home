@@ -3,7 +3,9 @@ const RContent = (props) => {
     return (
 
         <div id='secondary' className=''>
-            Column
+            <div className='section-body'>
+                Column
+            </div>
         </div>
     )
 }

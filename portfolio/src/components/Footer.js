@@ -3,7 +3,9 @@ const Footer = (props) => {
     return (
 
         <div>
-            Footer
+            <div className='section-body'>
+                Footer
+            </div>
         </div>
     )
 }

@@ -13,7 +13,7 @@ const Content = (props) => {
                           id={item.target} 
                           onChange={(inView, entry) => inView && setActive(item.id)}
                         >
-                            <div>
+                            <div className='section-body'>
                                 {item.name}
                             </div>
                         </InView>

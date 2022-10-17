@@ -1,5 +1,5 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url(https://fonts.googleapis.com/css2?family=Silkscreen);
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Chakra+Petch');
 $nord0: #2E3440;
 $nord1: #3B4252;
 $nord2: #434C5E;
@@ -20,6 +20,7 @@ $nord15: #B48EAD;
 $section-height: 100vh;
 $num-sections: 5;
 $side-height: $num-sections * $section-height;
+$light-text-color: $nord4;
 
 @font-face {
   font-family: 'Montserrat';
@@ -29,6 +30,7 @@ $side-height: $num-sections * $section-height;
 }
 
 $silkscreen: 'Silkscreen';
+$hard-font: 'Chakra Petch';
 
 * {
   margin: 0;
@@ -39,18 +41,55 @@ $silkscreen: 'Silkscreen';
 }
 
 html {
-  font-size: 92%;
+  font-size: 100%;
 }
 
 body {
   height: 100%;
   margin: 0;
+  // background-color: $nord3;
+  // color: $nord4;
+  // background-image:
+  //   radial-gradient( circle at 50%, transparent 20%, hsla(0, 0%, 5%, 0.8) 100%),
+  //   radial-gradient( circle at 50%,  hsl( 0, 0%,   5%     ) 3px, transparent 4px),
+  //   radial-gradient( circle at 50%, hsla( 0, 0%, 100%, 0.1) 4px, transparent 5px),
+  //   radial-gradient( circle at 50%,  hsl( 0, 0%,   5%     ) 3px, transparent 4px),
+  //   radial-gradient( circle at 50%, hsla( 0, 0%, 100%, 0.1) 4px, transparent 5px),
+  //   url('../img/leather.jpg');
+  // background-size:
+  //   cover,
+  //   40px 40px,
+  //   40px 40px,
+  //   40px 40px,
+  //   40px 40px,
+  //   auto;
+  // /* Fallback */
+  // background-position:
+  //   50%, 
+  //   0 0, 
+  //   0 1px,
+  //   20px 20px,
+  //   20px 21px, 
+  //   50%;
+  // background-position: 
+  //   50%, 
+  //   50%, 
+  //   50% calc(50% + 1px),
+  //   calc(50% + 20px) calc(50% + 20px),
+  //   calc(50% + 20px) calc(50% + 21px),
+  //   50%;
+  // background-attachment: fixed;
   background-color: $nord3;
-  color: $nord4;
 }
 
 section {
     height: $section-height;
+}
+
+article {
+  &:nth-child(1) {
+    margin-top: 4rem;
+  }
 }
 
 #container {
@@ -96,6 +135,7 @@ footer {
 
 nav {
     background-color: $nord10;
+    font-family: $hard-font;
 }
 
 a.navbar-brand {
@@ -471,4 +511,8 @@ $offset: calc($total / 3);
 	transform: rotate(360deg);
     background-color: #A3BE8C;
     color:$nord0;
+}
+
+.section-body {
+  color: $light-text-color;
 }

@@ -3,7 +3,9 @@ const LColumn = (props) => {
     return (
 
         <div id='primary' className=''>
-            Column
+            <div className='section-body'>
+                Column
+            </div>
         </div>
     )
 }

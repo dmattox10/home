@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import logo32 from '../img/logo32.png'
 const Header = (props) => {
     const {navItems, activeItem, setActive} = props
 
@@ -9,8 +10,12 @@ const Header = (props) => {
     
     return (
         <nav className="navbar navbar-expand-md fixed-top sticky navbarScroll">
-        <div className="container-md">
-            <AnchorLink className="navbar-brand" href="#">MX</AnchorLink>
+            <div className="container-md">
+                <AnchorLink className="navbar-brand" href="#">
+                    <div className='logo-box'>
+                        <img className='logo' src={logo32} />
+                    </div>
+                </AnchorLink>
                 <button 
                 className='navbar-toggler bento-menu'
                 data-bs-toggle="collapse" 
