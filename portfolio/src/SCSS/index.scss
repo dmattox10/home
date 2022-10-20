@@ -47,38 +47,6 @@ html {
 body {
   height: 100%;
   margin: 0;
-  // background-color: $nord3;
-  // color: $nord4;
-  // background-image:
-  //   radial-gradient( circle at 50%, transparent 20%, hsla(0, 0%, 5%, 0.8) 100%),
-  //   radial-gradient( circle at 50%,  hsl( 0, 0%,   5%     ) 3px, transparent 4px),
-  //   radial-gradient( circle at 50%, hsla( 0, 0%, 100%, 0.1) 4px, transparent 5px),
-  //   radial-gradient( circle at 50%,  hsl( 0, 0%,   5%     ) 3px, transparent 4px),
-  //   radial-gradient( circle at 50%, hsla( 0, 0%, 100%, 0.1) 4px, transparent 5px),
-  //   url('../img/leather.jpg');
-  // background-size:
-  //   cover,
-  //   40px 40px,
-  //   40px 40px,
-  //   40px 40px,
-  //   40px 40px,
-  //   auto;
-  // /* Fallback */
-  // background-position:
-  //   50%, 
-  //   0 0, 
-  //   0 1px,
-  //   20px 20px,
-  //   20px 21px, 
-  //   50%;
-  // background-position: 
-  //   50%, 
-  //   50%, 
-  //   50% calc(50% + 1px),
-  //   calc(50% + 20px) calc(50% + 20px),
-  //   calc(50% + 20px) calc(50% + 21px),
-  //   50%;
-  // background-attachment: fixed;
   background-color: $nord3;
 }
 
@@ -88,7 +56,8 @@ section {
 
 article {
   &:nth-child(1) {
-    margin-top: 4rem;
+    margin-top: -1.5rem;
+    // background-color: $nord0;
   }
 }
 
@@ -277,14 +246,14 @@ li.nav-item:nth-child(4n) a.nav-link.active {
         }
         margin-top: 8px;
         margin-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 
 @include media-breakpoint-down(lg) {
     #primary {
-        p {
-            // transform: [{ rotate: '90deg'}];
-        }
+        writing-mode: vertical-rl;
     }
   #secondary {
     writing-mode: vertical-rl;

@@ -1,4 +1,4 @@
-const RContent = (props) => {
+const RColumn = (props) => {
 
     return (
 
@@ -10,4 +10,4 @@ const RContent = (props) => {
     )
 }
 
-export default RContent
+export default RColumn

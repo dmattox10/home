@@ -9,7 +9,7 @@ const Header = (props) => {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
     
     return (
-        <nav className="navbar navbar-expand-md fixed-top sticky navbarScroll">
+        <nav className="navbar navbar-expand-md fixed-top navbarScroll">
             <div className="container-md">
                 <AnchorLink className="navbar-brand" href="#">
                     <div className='logo-box'>
