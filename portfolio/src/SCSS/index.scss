@@ -18,7 +18,7 @@ $nord14: #A3BE8C;
 $nord15: #B48EAD;
 
 $section-height: 100vh;
-$num-sections: 5;
+$num-sections: 6;
 $side-height: $num-sections * $section-height;
 $light-text-color: $nord4;
 
@@ -38,6 +38,11 @@ $hard-font: 'Chakra Petch';
   border: 0px none;
   border-color: unset;
   box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -97,10 +102,10 @@ footer {
   text-align: center;
 }
 
-.col {
-    min-height: 100%;
-    background-color: #88C0D0;
-}
+// .col {
+//     min-height: 100%;
+//     background-color: #88C0D0;
+// }
 
 nav {
     background-color: $nord10;
@@ -219,7 +224,7 @@ li.nav-item:nth-child(4n) a.nav-link.active {
   width: 98%;
   margin-left: 2%;
   margin-bottom: 2%;
-  background-color: $nord0;
+  // background-color: $nord0;
   padding: 1em;
   min-height: 60px;
   transition: all 0.3s linear;
@@ -484,4 +489,46 @@ $offset: calc($total / 3);
 
 .section-body {
   color: $light-text-color;
+}
+
+.left {
+  width: 60px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  ul {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    list-style-type: none;
+    li a {
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  ul::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 13px;
+    margin-right: auto;
+    background-color: $nord4;
+  }
+ a {
+
+ }
+}
+
+#secondary {
+ a {
+
+ }
 }

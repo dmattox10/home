@@ -36,6 +36,12 @@ function App () {
         target: 'resume'
     }
 ]
+  const socials = [
+    'https://github.com/dmattox10',
+    'https://linkedin.com/in/dmattox10',
+    'https://medium.com/@damndanieldaniel/',
+    'https://twitter.com/dmattox10'
+  ]
 
   const [activeItem, setActiveItem] = useState()
 
@@ -46,9 +52,10 @@ function App () {
   return (
     <div className='App'>
       <Layout 
-        navItems={navItems}
-        activeItem={activeItem}
-        setActive={setActive}
+        navItems={ navItems }
+        activeItem={ activeItem }
+        setActive={ setActive }
+        socials={ socials }
       />
     </div>
   )

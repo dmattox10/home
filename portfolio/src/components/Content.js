@@ -5,6 +5,11 @@ const Content = (props) => {
     return (
 
         <div>
+            <InView as="section"
+                id='home'
+            >
+                <div className='section-body'>Home</div>
+            </InView>
             {
                 navItems.map((item) => {
                     return (
