@@ -488,7 +488,62 @@ $offset: calc($total / 3);
 }
 
 .section-body {
+  padding: 1rem;
+  background-color: #3B4252;
   color: $light-text-color;
+
+}
+
+.right {
+  width: 60px;
+  position: fixed;
+  bottom: 0px;
+  right: 40px;
+  left: auto;
+  z-index: 10;
+  color: $light-text-color;
+  .email {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1em;
+    a {
+      margin-top: 20px;
+      padding-top: 10px;
+      letter-spacing: 0.12em;
+      margin-right: -36px;
+      writing-mode: vertical-rl;
+      &:link {
+        color: $nord6;
+        text-decoration: none;
+      }
+      &:visited {
+        color: $nord6;
+        text-decoration: none;
+      }
+      &:hover {
+        color: $nord6;
+        text-decoration: none;
+      }
+      &:active {
+        color: $nord6;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .email::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 120px;
+    margin-top: 10px;
+    margin-right: 13px;
+    margin-left: auto;
+    background-color: $nord4;
+  }
 }
 
 .left {
@@ -507,7 +562,7 @@ $offset: calc($total / 3);
     padding-top: 0px;
     list-style-type: none;
     li a {
-      margin-top: 10px;
+      margin-top: 20px;
       padding-top: 10px;
     }
   }
