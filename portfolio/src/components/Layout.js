@@ -1,8 +1,8 @@
-import LColumn from './LColumn'
-import RColumn from './RColumn'
-import Header from './Header'
-import Content from './Content'
-import Footer from './Footer'
+import LColumn from './layout/LColumn'
+import RColumn from './layout/RColumn'
+import Header from './layout/Header'
+import Content from './layout/Content'
+import Footer from './layout/Footer'
 
 const Layout = (props) => {
     const { navItems, activeItem, setActive, socials } = props

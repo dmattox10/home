@@ -581,11 +581,11 @@ $offset: calc($total / 3);
 
   @keyframes bounce {
     from {
-      transform: scaleX(1);
+      transform: scale(1);
     }
   
     to {
-      transform: scaleX(1.5);
+      transform: scale(2);
       transform: translateY(-8px);
     }
   }
@@ -759,4 +759,27 @@ $offset: calc($total / 3);
   }
 }
 
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 1vw;
+  font-family: arial;
+  color: #d8dee9;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #bf616a;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #d8dee9;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
 

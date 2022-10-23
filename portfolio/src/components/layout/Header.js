@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import logo32 from '../img/logo32.png'
+import logo32 from '../../img/logo32.png'
 const Header = (props) => {
     const {navItems, activeItem, setActive} = props
 
