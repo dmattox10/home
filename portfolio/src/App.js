@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import { useScrollDirection } from 'react-use-scroll-direction'
 
+import { useDocument } from './hooks/useDocument'
+
 import Layout from './components/Layout'
 function App () {
+
+  const [appReady] = useDocument()
 
   const {
     isScrollingUp, 
@@ -48,6 +52,8 @@ function App () {
   const setActive = (id) => {
     setActiveItem(prevState => id)
   }
+
+  console.log(appReady)
 
   return (
     <div className='App'>
