@@ -1,17 +1,22 @@
 import { useState } from 'react'
 import { useScrollDirection } from 'react-use-scroll-direction'
 
-import { useDocument } from './hooks/useDocument'
+import { useTimeout } from './hooks/useTimeout'
 
 import Layout from './components/Layout'
+import Loader from './Loader'
 function App () {
-
-  const [appReady] = useDocument()
 
   const {
     isScrollingUp, 
     isScrollingDown
   } = useScrollDirection()
+
+  const [hasTimerElapsed, setTimerElapsed] = useState(false)
+
+  useTimeout(() => {
+    setTimerElapsed(true)
+  }, 800)
 
   const navItems = [
     {
@@ -53,16 +58,18 @@ function App () {
     setActiveItem(prevState => id)
   }
 
-  console.log(appReady)
-
   return (
     <div className='App'>
+      { hasTimerElapsed ?
       <Layout 
         navItems={ navItems }
         activeItem={ activeItem }
         setActive={ setActive }
         socials={ socials }
-      />
+       />
+       :
+       <Loader />
+      }
     </div>
   )
 }

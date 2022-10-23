@@ -13,7 +13,7 @@ const Header = (props) => {
             <div className="container-md">
                 <AnchorLink className="navbar-brand" href="#">
                     <div className='logo-box'>
-                        <img className='logo' src={logo32} />
+                        <img className='logo' src={logo32} alt='logo'/>
                     </div>
                 </AnchorLink>
                 <button 

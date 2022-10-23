@@ -22,12 +22,12 @@ $num-sections: 6;
 $side-height: $num-sections * $section-height;
 $light-text-color: $nord4;
 
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aX8.ttf) format('truetype');
-}
+// @font-face {
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aX8.ttf) format('truetype');
+// }
 
 $silkscreen: 'Silkscreen';
 $hard-font: 'Chakra Petch';
@@ -503,6 +503,7 @@ $offset: calc($total / 3);
   z-index: 10;
   color: $light-text-color;
   .email {
+    font-family: $hard-font;
     display: flex;
     flex-direction: column;
     -webkit-box-align: center;
@@ -578,8 +579,14 @@ $offset: calc($total / 3);
     background-color: $nord4;
   }
 }
+.loader-container {
+  height: 100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-dank-ass-loader {
+.dank-ass-loader {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -599,11 +606,11 @@ dank-ass-loader {
   margin: 0 -6px;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-bottom: 21.6px solid #00ffff;
+  border-bottom: 21.6px solid $nord8;
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
-  -webkit-filter: drop-shadow(0 0 18px #00ffff);
-          filter: drop-shadow(0 0 18px #00ffff);
+  -webkit-filter: drop-shadow(0 0 18px $nord10);
+          filter: drop-shadow(0 0 18px $nord10);
 }
 .arrow.down {
   -webkit-transform: rotate(180deg);
