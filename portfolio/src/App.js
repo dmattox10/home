@@ -5,8 +5,9 @@ import { useTimeout } from './hooks/useTimeout'
 
 import Layout from './components/Layout'
 import Loader from './Loader'
-function App () {
+const App = (props) => {
 
+  const { time } = props
   const {
     isScrollingUp, 
     isScrollingDown
@@ -16,7 +17,7 @@ function App () {
 
   useTimeout(() => {
     setTimerElapsed(true)
-  }, 800)
+  }, time)
 
   const navItems = [
     {

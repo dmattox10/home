@@ -525,8 +525,12 @@ $offset: calc($total / 3);
         text-decoration: none;
       }
       &:hover {
-        color: $nord6;
         text-decoration: none;
+        color: #fff;
+        animation-duration: 0.3s;
+        animation-name: bounce;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
       &:active {
         color: $nord6;
@@ -564,7 +568,25 @@ $offset: calc($total / 3);
     list-style-type: none;
     li a {
       margin-top: 20px;
-      padding-top: 10px;
+      padding-top: 10px;      
+      &:hover {
+        color: #fff;
+        animation-duration: 0.3s;
+        animation-name: bounce;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      transform: scaleX(1);
+    }
+  
+    to {
+      transform: scaleX(1.5);
+      transform: translateY(-8px);
     }
   }
 

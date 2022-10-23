@@ -7,10 +7,15 @@ import Loader from './Loader'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
+const min = 400
+const max = 800
+
+const time = Math.random() * (max - min) + min
+
 root.render(
   <React.StrictMode>
     <Suspense fallback={Loader}>
-      <App />
+      <App time={time}/>
     </Suspense>
   </React.StrictMode>
 )
