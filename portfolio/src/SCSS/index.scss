@@ -155,68 +155,20 @@ a.nav-link:hover {
     color: #ECEFF4;
 }
 
-li.nav-item:nth-child(1n) a.nav-link:focus {
+li.nav-item > a.nav-link:focus {
     color:#ECEFF4;
 }
 
-li.nav-item:nth-child(1n) a.nav-link.active {
+li.nav-item > a.nav-link.active {
     color:#ECEFF4;
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
     background-color: transparent;
-    border-radius: 4px;
-    border-top-color: #D08770;
-    border-right-color:#A3BE8C;
-    border-bottom-color: #88C0D0;
-    border-left-color: #EBCB8B;
-}
-
-li.nav-item:nth-child(2n) a.nav-link:focus {
-    color:#ECEFF4;
-}
-
-li.nav-item:nth-child(2n) a.nav-link.active {
-    color:#ECEFF4;
-    border-style: solid;
-    border-width: 2px;
-    background-color: transparent;
-    border-radius: 4px;
+    border-radius: 6px;
     border-top-color: #EBCB8B;
     border-right-color:#BF616A;
     border-bottom-color: #A3BE8C;
     border-left-color: #88C0D0;
-}
-
-li.nav-item:nth-child(3n) a.nav-link:focus {
-    color:#ECEFF4;
-}
-
-li.nav-item:nth-child(3n) a.nav-link.active {
-    color:#ECEFF4;
-    border-style: solid;
-    border-width: 2px;
-    background-color: transparent;
-    border-radius: 4px;
-    border-top-color: #88C0D0;
-    border-right-color:#EBCB8B;
-    border-bottom-color: #D08770;
-    border-left-color: #A3BE8C;
-}
-
-li.nav-item:nth-child(4n) a.nav-link:focus {
-    color:#ECEFF4;
-}
-
-li.nav-item:nth-child(4n) a.nav-link.active {
-    color:#ECEFF4;
-    border-style: solid;
-    border-width: 2px;
-    background-color: transparent;
-    border-radius: 4px;
-    border-top-color: #A3BE8C;
-    border-right-color:#88C0D0;
-    border-bottom-color: #EBCB8B;
-    border-left-color: #D08770;
 }
 
 .module {
@@ -454,15 +406,24 @@ $offset: calc($total / 3);
     margin-top: 0px;
     padding-top: 0px;
     list-style-type: none;
-    li a {
-      margin-top: 20px;
-      padding-top: 10px;      
-      &:hover {
-        color: #fff;
-        animation-duration: 0.3s;
-        animation-name: bounce;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
+    li {
+        a {
+        margin-top: 20px;
+        padding-top: 10px; 
+        border-style: solid !important;
+        border-width: 3px !important;
+        border-radius: 50% !important;
+        border-top-color: #EBCB8B !important;
+        border-right-color:#BF616A !important;
+        border-bottom-color: #A3BE8C !important;
+        border-left-color: #88C0D0 !important;
+        &:hover {
+          color: #fff;
+          animation-duration: 0.3s;
+          animation-name: bounce;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
       }
     }
   }
@@ -760,15 +721,14 @@ $offset: calc($total / 3);
       list-style-type: none;
       li a {
         margin-top: 20px;
-        padding-top: 10px;      
+        padding-top: 10px;   
       }
     }
     ul::after {
       content: "";
       display: none;
     }
-}
-
+  }
 }
 
 @media only screen and (max-width: 482px) {
