@@ -468,12 +468,12 @@ $offset: calc($total / 3);
 }
 .bento-menu:hover span:nth-child(2){
 	transform: rotate(360deg);
-    background-color: #88C0D0;
+    background-color: #EBCB8B;
     color:$nord0;
 }
 .bento-menu:hover span:nth-child(4){
 	transform: rotate(360deg);
-    background-color: #EBCB8B;
+    background-color: #88C0D0;
     color:$nord0;
 }
 .bento-menu:hover span:nth-child(6){
@@ -783,3 +783,12 @@ $offset: calc($total / 3);
   text-decoration: underline;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -13,7 +13,9 @@ import ContentResume from './components/views/ContentResume'
 import ContentWork from './components/views/ContentWork'
 
 const App = (props) => {
-  const { time } = props
+
+  const time = 800
+
   const {
     isScrollingUp,
     isScrollingDown
@@ -80,7 +82,10 @@ const App = (props) => {
             socials={socials}
             hasTimerElapsed={hasTimerElapsed}
           />
-        : <Loader />}
+        : <Loader
+            time={time}
+            hasTimerElapsed={hasTimerElapsed} 
+          />}
     </div>
   )
 }
