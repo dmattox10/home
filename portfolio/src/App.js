@@ -5,11 +5,17 @@ import { useTimeout } from './hooks/useTimeout'
 
 import Layout from './components/Layout'
 import Loader from './Loader'
-const App = (props) => {
 
+import ContentAbout from './components/views/ContentAbout'
+import ContentContact from './components/views/ContentContact'
+import ContentExperience from './components/views/ContentExperience'
+import ContentResume from './components/views/ContentResume'
+import ContentWork from './components/views/ContentWork'
+
+const App = (props) => {
   const { time } = props
   const {
-    isScrollingUp, 
+    isScrollingUp,
     isScrollingDown
   } = useScrollDirection()
 
@@ -21,31 +27,36 @@ const App = (props) => {
 
   const navItems = [
     {
-        id: 1,
-        name: 'About',
-        target: 'about'
+      id: 1,
+      name: 'About',
+      target: 'about',
+      component: <ContentAbout />
     },
     {
-        id: 2,
-        name: 'Work',
-        target: 'work'
+      id: 2,
+      name: 'Work',
+      target: 'work',
+      component: <ContentWork />
     },
     {
-        id: 3,
-        name: 'Experience',
-        target: 'experience'
+      id: 3,
+      name: 'Experience',
+      target: 'experience',
+      component: <ContentExperience />
     },
     {
-        id: 4,
-        name: 'Contact',
-        target: 'contact'
+      id: 4,
+      name: 'Contact',
+      target: 'contact',
+      component: <ContentContact />
     },
     {
-        id: 5,
-        name: 'Resume',
-        target: 'resume'
+      id: 5,
+      name: 'Resume',
+      target: 'resume',
+      component: <ContentResume />
     }
-]
+  ]
   const socials = [
     'https://github.com/dmattox10',
     'https://linkedin.com/in/dmattox10',
@@ -61,16 +72,15 @@ const App = (props) => {
 
   return (
     <div className='App'>
-      { hasTimerElapsed ?
-      <Layout 
-        navItems={ navItems }
-        activeItem={ activeItem }
-        setActive={ setActive }
-        socials={ socials }
-       />
-       :
-       <Loader />
-      }
+      {hasTimerElapsed
+        ? <Layout
+            navItems={navItems}
+            activeItem={activeItem}
+            setActive={setActive}
+            socials={socials}
+            hasTimerElapsed={hasTimerElapsed}
+          />
+        : <Loader />}
     </div>
   )
 }

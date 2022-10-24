@@ -15,7 +15,7 @@ const time = Math.random() * (max - min) + min
 root.render(
   <React.StrictMode>
     <Suspense fallback={Loader}>
-      <App time={time}/>
+      <App time={time} />
     </Suspense>
   </React.StrictMode>
 )
