@@ -11,9 +11,7 @@ const Content = (props) => {
         as='section'
         id='home'
       >
-        <div className='section-body'>
-            <ContentHome hasTimerElapsed={hasTimerElapsed} />
-        </div>
+        <ContentHome />
       </InView>
       {
                 navItems.map((item) => {

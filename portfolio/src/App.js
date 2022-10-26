@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import { useScrollDirection } from 'react-use-scroll-direction'
+import pMinDelay from 'p-min-delay'
 
 import { useTimeout } from './hooks/useTimeout'
 
-import Layout from './components/Layout'
+// import Layout from './components/Layout'
 import Loader from './Loader'
 
 import ContentAbout from './components/views/ContentAbout'
@@ -11,6 +12,8 @@ import ContentContact from './components/views/ContentContact'
 import ContentExperience from './components/views/ContentExperience'
 import ContentResume from './components/views/ContentResume'
 import ContentWork from './components/views/ContentWork'
+
+const Layout = React.lazy(() => pMinDelay(import('./components/Layout'), 800));
 
 const App = (props) => {
 
@@ -74,18 +77,15 @@ const App = (props) => {
 
   return (
     <div className='App'>
-      {hasTimerElapsed
-        ? <Layout
-            navItems={navItems}
-            activeItem={activeItem}
-            setActive={setActive}
-            socials={socials}
-            hasTimerElapsed={hasTimerElapsed}
-          />
-        : <Loader
-            time={time}
-            hasTimerElapsed={hasTimerElapsed} 
-          />}
+      <Suspense fallback={<Loader time={time} hasTimerElapsed={hasTimerElapsed} />}>
+        <Layout 
+          navItems={navItems}
+          activeItem={activeItem}
+          setActive={setActive}
+          socials={socials}
+          hasTimerElapsed={hasTimerElapsed}
+        />
+      </Suspense>
     </div>
   )
 }
