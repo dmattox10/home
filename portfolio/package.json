@@ -19,6 +19,7 @@
     "react-use-scroll-direction": "^0.1.0",
     "rooks": "^7.4.0",
     "sass": "^1.55.0",
+    "styled-components": "^5.3.6",
     "unstated": "^2.1.1",
     "use-scroll-position": "^0.0.4",
     "web-vitals": "^2.1.4"

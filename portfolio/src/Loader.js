@@ -1,11 +1,11 @@
-import { useFade } from "./hooks/useFade";
+import { useFadeOut } from "./hooks/useFadeOut";
 import { useTimeout } from "./hooks/useTimeout";
 const Loader = (props) => {
 
   const { time } = props
   const halfTime = time / 2
 
-  const [isVisible, setVisible, fadeProps] = useFade(true);
+  const [isVisible, setVisible, fadeProps] = useFadeOut(true);
 
   useTimeout(() => {
     setVisible(false)

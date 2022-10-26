@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-export const useFade = (initial) => {
+export const useFadeIn = (initial) => {
     const [show, setShow] = useState(initial);
     const [isVisible, setVisible] = useState(show);
 
@@ -14,7 +14,7 @@ export const useFade = (initial) => {
         if (!show) setVisible(false);
     };
 
-    const style = { animation: `${show ? "" : "fadeOut"} .8s` };
+    const style = { animation: `${show ? "fadeIn" : ""} .8s` };
 
     // These props go on the fading DOM element
     const fadeProps = {

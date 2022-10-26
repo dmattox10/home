@@ -13,7 +13,7 @@ import ContentExperience from './components/views/ContentExperience'
 import ContentResume from './components/views/ContentResume'
 import ContentWork from './components/views/ContentWork'
 
-const Layout = React.lazy(() => pMinDelay(import('./components/Layout'), 800));
+const Layout = React.lazy(() => pMinDelay(import('./components/Layout'), 800))
 
 const App = (props) => {
 

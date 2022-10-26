@@ -2,7 +2,9 @@ import { InView } from 'react-intersection-observer'
 import ContentHome from '../views/ContentHome'
 
 const Content = (props) => {
-  const { navItems, setActive, hasTimerElapsed } = props
+  const { navItems, setActive } = props
+
+
 
   return (
 
