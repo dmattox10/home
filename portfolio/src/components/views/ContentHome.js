@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 
 const ContentHome = (props) => {
+
     const skewBlur = keyframes`
     0% { opacity: 0; transform: translateY(-100px) skewX(10deg) skewY(10deg) rotateZ(30deg); filter: blur(10px); }
     25% { opacity: 1; transform: translateY(0px) skewX(0deg) skewY(0deg) rotateZ(0deg); filter: blur(0px); }
     100% { opacity: 1; transform: translateY(0px) skewX(0deg) skewY(0deg) rotateZ(0deg); filter: blur(0px); }
   `
 
-    const Wrapper = styled.div`
+    const MovingWrapper = styled.div`
 
     span {
         opacity: 0;
@@ -41,43 +42,96 @@ const ContentHome = (props) => {
         animation-delay: 1s;
     }`
 
-    return (
-            <Wrapper className='section-body'>
-                    <span className='layer-1'>
+    const StillWrapper = styled.div`
+    span {
+        opacity: 1;
+        display: block;
+    }
+    `
+
+    const StillComponent = () => {
+
+
+        return (
+            <StillWrapper>
+                <span className='layer-1'>
                         <h1>Hi, I'm</h1>
-                    </span>
-                    <span className='layer-1'>
-                        <h2>Daniel Mattox, <div>your new</div></h2>
-                    </span>
-                    <span className='layer-1'>
-                        <h3>Full-Stack Web Developer.</h3>
-                    </span>
-                    <span className='layer-1'>
-                        <h4>I've no pen to sell you, but since you're here, take this<button className='btn'>Resume!</button></h4>
-                    </span>
-                
-            </Wrapper>
-    )
+                </span>
+                <span className='layer-1'>
+                    <h2>Daniel Mattox, <div>your new</div></h2>
+                </span>
+                <span className='layer-1'>
+                    <h3>Full-Stack Web Developer.</h3>
+                </span>
+                <span className='layer-1'>
+                    <h4>I've no pen to sell you, but since you're here, take this<button className='btn'>Resume!</button></h4>
+                </span>
+            </StillWrapper>
+        )
+    }
+
+    const dopple = ( started, finished ) => {
+
+        if (!started && !finished) {
+            return <StillComponent />
+        }
+        else if (started && !finished) {
+            return <MovingComponent />
+        }
+        else if (started && finished) {
+            return <StillComponent />
+        }
+        
+    }
+
+    const [started, setStarted] = useState(false)
+    const [finished, setFinished] = useState(false)
+    const [activeItem, setActiveItem] = useState(dopple())
+
+    useEffect(() => {
+        if (!started && !finished) {
+            setStarted(true)
+            console.log('starting')
+            setTimeout(6000, setFinished(true))
+            setActiveItem(dopple)
+        }
+        else if (started && !finished) {
+            console.log('started')
+            setActiveItem(dopple)
+        }
+        else if (started && finished) {
+            console.log('finished')
+            setActiveItem(dopple)
+        }
+    }, [started, finished])
+
+    const MovingComponent = () => {
+
+        return ( 
+            <MovingWrapper className='section-body'>
+                <span className='layer-1'>
+                     <h1>Hi, I'm</h1>
+                </span>
+                <span className='layer-1'>
+                    <h2>Daniel Mattox, <div>your new</div></h2>
+                </span>
+                <span className='layer-1'>
+                    <h3>Full-Stack Web Developer.</h3>
+                </span>
+                <span className='layer-1'>
+                    <h4>I've no pen to sell you, but since you're here, take this<button className='btn'>Resume!</button></h4>
+                </span>
+            </MovingWrapper>
+        )
+    }
+
+    const Component = () => {
+        const componentBody = activeItem
+        return componentBody
+    }
+
+    return <Component />
+    
 }
 
 export default ContentHome
-
-/*
-
-<br />
-                <span>
-                    <h1>Hi, Im</h1>
-                </span>
-                <br />
-                <span>
-                    <h2>Daniel Mattox,</h2>
-                </span>
-                <br />
-                <span>
-                    <h3>Your new full-stack</h3>
-                </span>
-                <br />
-                <span>
-                    <h4>Web Developer!</h4>
-                </span>
-                */

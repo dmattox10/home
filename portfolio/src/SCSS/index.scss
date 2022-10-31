@@ -178,6 +178,7 @@ a.navbar-brand {
 a.nav-link {
     color:#D8DEE9;
     display: unset;
+    height: 1rem;
 }
 
 a.nav-link:hover {
@@ -194,10 +195,10 @@ li.nav-item > a.nav-link:focus {
 
 li.nav-item > a.nav-link.active {
     color:#ECEFF4;
+    border-radius: 1.2rem;
     border-style: solid;
     border-width: 3px;
     background-color: transparent;
-    border-radius: 6px;
     border-top-color: #EBCB8B;
     border-right-color:#BF616A;
     border-bottom-color: #A3BE8C;
