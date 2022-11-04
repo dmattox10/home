@@ -86,6 +86,9 @@ h3 {
   font-size: clamp(40px, 8vw, 80px);
   position: absolute;
   top: 0;
+  div {
+    display: inline;
+  }
 }
 
 h4 {
@@ -377,7 +380,43 @@ $offset: calc($total / 3);
     color:$nord0;
 }
 
+// .section-body {
+//   padding: 1rem;
+//   // background-color: #3B4252;
+//   color: $light-text-color;
+//   height: 80%;
+//   display: flex;
+//   flex-direction: column;
+//   span {
+//     flex: 1;
+//   }
+// }
+
 .section-body {
+  padding: 1rem;
+  color: $light-text-color;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    flex: 1;
+    opacity: 0;
+    display: block;
+    animation-name: skewBlur;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.25}s;
+      }
+    }
+  }
+}
+
+.section-body.done {
   padding: 1rem;
   // background-color: #3B4252;
   color: $light-text-color;
@@ -865,6 +904,16 @@ span.skewBlur {
 @media only screen and (max-width: 482px) {
   .col {
     display: none;
+  }
+  h2 {
+    div {
+      display: block;
+    }
+  }
+  h3 {
+    div {
+      display: block;
+    }
   }
   .h-2 {
     height: 50%;

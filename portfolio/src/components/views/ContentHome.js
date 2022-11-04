@@ -4,6 +4,8 @@ import styled, { keyframes } from 'styled-components'
 
 const ContentHome = (props) => {
 
+    const { started, finished } = props
+
     const skewBlur = keyframes`
     0% { opacity: 0; transform: translateY(-100px) skewX(10deg) skewY(10deg) rotateZ(30deg); filter: blur(10px); }
     25% { opacity: 1; transform: translateY(0px) skewX(0deg) skewY(0deg) rotateZ(0deg); filter: blur(0px); }
@@ -84,26 +86,26 @@ const ContentHome = (props) => {
         
     }
 
-    const [started, setStarted] = useState(false)
-    const [finished, setFinished] = useState(false)
+    // const [started, setStarted] = useState(false)
+    // const [finished, setFinished] = useState(false)
     const [activeItem, setActiveItem] = useState(dopple())
 
-    useEffect(() => {
-        if (!started && !finished) {
-            setStarted(true)
-            console.log('starting')
-            setTimeout(6000, setFinished(true))
-            setActiveItem(dopple)
-        }
-        else if (started && !finished) {
-            console.log('started')
-            setActiveItem(dopple)
-        }
-        else if (started && finished) {
-            console.log('finished')
-            setActiveItem(dopple)
-        }
-    }, [started, finished])
+    // useEffect(() => {
+    //     if (!started && !finished) {
+    //         setStarted(true)
+    //         console.log('starting')
+    //         setTimeout(6000, setFinished(true))
+    //         setActiveItem(dopple)
+    //     }
+    //     else if (started && !finished) {
+    //         console.log('started')
+    //         setActiveItem(dopple)
+    //     }
+    //     else if (started && finished) {
+    //         console.log('finished')
+    //         setActiveItem(dopple)
+    //     }
+    // }, [started, finished])
 
     const MovingComponent = () => {
 
@@ -116,7 +118,7 @@ const ContentHome = (props) => {
                     <h2>Daniel Mattox, <div>your new</div></h2>
                 </span>
                 <span className='layer-1'>
-                    <h3>Full-Stack Web Developer.</h3>
+                    <h3>Full-Stack <div></div>Web Developer.</h3>
                 </span>
                 <span className='layer-1'>
                     <h4>I've no pen to sell you, but since you're here, take this<button className='btn'>Resume!</button></h4>
@@ -124,6 +126,18 @@ const ContentHome = (props) => {
             </MovingWrapper>
         )
     }
+
+    useEffect(() => {
+        if (!started && !finished) {
+            setActiveItem(<StillComponent />)
+        }
+        else if (started && !finished) {
+            setActiveItem(<MovingComponent />)
+        }
+        else if (started && finished) {
+            setActiveItem(<StillComponent />)
+        }
+    }, [started, finished])
 
     const Component = () => {
         const componentBody = activeItem

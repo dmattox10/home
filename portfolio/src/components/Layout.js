@@ -5,7 +5,7 @@ import Content from './layout/Content'
 import Footer from './layout/Footer'
 
 const Layout = (props) => {
-  const { navItems, activeItem, setActive, socials, hasTimerElapsed } = props
+  const { navItems, activeItem, setActive, socials, started, finished } = props
 
   return (
     <div className='grid'>
@@ -16,7 +16,7 @@ const Layout = (props) => {
         <LColumn socials={socials} />
       </article>
       <article className='module desktop-10 tablet-10'>
-        <Content navItems={navItems} activeItem={activeItem} setActive={setActive} hasTimerElapsed={hasTimerElapsed} />
+        <Content navItems={navItems} activeItem={activeItem} setActive={setActive} started={started} finished={finished} />
       </article>
       <article className='module desktop-1 tablet-1 col'>
         <RColumn />

@@ -2,7 +2,7 @@ import { InView } from 'react-intersection-observer'
 import ContentHome from '../views/ContentHome'
 
 const Content = (props) => {
-  const { navItems, setActive } = props
+  const { navItems, setActive, started, finished, activeItem } = props
 
 
 
@@ -13,7 +13,7 @@ const Content = (props) => {
         as='section'
         id='home'
       >
-        <ContentHome />
+        <ContentHome started={started} finished={finished} activeItem={activeItem} setActive={setActive} />
       </InView>
       {
                 navItems.map((item) => {

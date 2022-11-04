@@ -1,6 +1,7 @@
-import React, { useState, Suspense } from 'react'
+import React, { useState, Suspense, useEffect } from 'react'
 import { useScrollDirection } from 'react-use-scroll-direction'
 import pMinDelay from 'p-min-delay'
+import { useTimeoutWhen } from 'rooks'
 
 import { useTimeout } from './hooks/useTimeout'
 
@@ -25,10 +26,10 @@ const App = (props) => {
   } = useScrollDirection()
 
   const [hasTimerElapsed, setTimerElapsed] = useState(false)
+  const [finished, setFinished] = useState(false)
 
-  useTimeout(() => {
-    setTimerElapsed(true)
-  }, time)
+  useTimeout(() => setTimerElapsed(true), time)
+  useTimeoutWhen(() => setFinished(true), 6000, hasTimerElapsed)
 
   const navItems = [
     {
@@ -39,7 +40,7 @@ const App = (props) => {
     },
     {
       id: 2,
-      name: 'Work',
+      name: 'My Work',
       target: 'work',
       component: <ContentWork />
     },
@@ -64,8 +65,9 @@ const App = (props) => {
   ]
   const socials = [
     'https://github.com/dmattox10',
-    'https://linkedin.com/in/dmattox10',
+    // 'https://codepen.io/dmattox10',
     'https://medium.com/@damndanieldaniel/',
+    'https://linkedin.com/in/dmattox10',
     'https://twitter.com/dmattox10'
   ]
 
@@ -83,7 +85,8 @@ const App = (props) => {
           activeItem={activeItem}
           setActive={setActive}
           socials={socials}
-          hasTimerElapsed={hasTimerElapsed}
+          started={hasTimerElapsed}
+          finished={finished}
         />
       </Suspense>
     </div>
