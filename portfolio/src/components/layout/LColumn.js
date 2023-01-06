@@ -10,7 +10,7 @@ const LColumn = (props) => {
             socials.map((item) => {
               return (
                 <li key={item.id}>
-                  <SocialIcon url={item} bgColor='#5E81AC' fgColor='#D8DEE9' />
+                  <SocialIcon url={item} key={item.id} bgColor='#5E81AC' fgColor='#D8DEE9' />
                 </li>
               )
             })

@@ -1,11 +1,12 @@
+import { forwardRef } from "react"
 
-const ContentResume = (props) => {
+const ContentResume = forwardRef(( props, ref ) => {
 
     return (
-        <div>
+        <div ref={ref}>
             Resume
         </div>
     )
-}
+})
 
 export default ContentResume

@@ -1,4 +1,4 @@
-import React, { useState, Suspense, useEffect } from 'react'
+import React, { useState, Suspense, useEffect, createRef } from 'react'
 import { useScrollDirection } from 'react-use-scroll-direction'
 import pMinDelay from 'p-min-delay'
 import { useTimeoutWhen } from 'rooks'
@@ -36,31 +36,36 @@ const App = (props) => {
       id: 1,
       name: 'About',
       target: 'about',
-      component: <ContentAbout />
+      component: <ContentAbout />,
+      nodeRef: createRef(null)
     },
     {
       id: 2,
       name: 'My Work',
       target: 'work',
-      component: <ContentWork />
+      component: <ContentWork />,
+      nodeRef: createRef(null)
     },
     {
       id: 3,
       name: 'Experience',
       target: 'experience',
-      component: <ContentExperience />
+      component: <ContentExperience />,
+      nodeRef: createRef(null)
     },
     {
       id: 4,
       name: 'Contact',
       target: 'contact',
-      component: <ContentContact />
+      component: <ContentContact />,
+      nodeRef: createRef(null)
     },
     {
       id: 5,
       name: 'Resume',
       target: 'resume',
-      component: <ContentResume />
+      component: <ContentResume />,
+      nodeRef: createRef(null)
     }
   ]
   const socials = [
@@ -77,6 +82,16 @@ const App = (props) => {
     setActiveItem(prevState => id)
   }
 
+  function onClickResume() {
+
+  }
+
+  useEffect(() => {
+    if (hasTimerElapsed) {
+      setFinished(true)
+    }
+  }, [hasTimerElapsed])
+
   return (
     <div className='App'>
       <Suspense fallback={<Loader time={time} hasTimerElapsed={hasTimerElapsed} />}>
@@ -87,6 +102,7 @@ const App = (props) => {
           socials={socials}
           started={hasTimerElapsed}
           finished={finished}
+          onClickResume={onClickResume}
         />
       </Suspense>
     </div>
