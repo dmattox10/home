@@ -9,7 +9,9 @@ module.exports = {
   },
   devServer: {
     static: './dist',
-    hot: true
+    hot: true,
+    port: 3434,
+    compress: true
   },
   module: {
     rules: [

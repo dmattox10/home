@@ -7,7 +7,7 @@ RUN yarn
 # Deploy
 FROM node:16-alpine
 RUN apk --no-cache add dumb-init
-EXPOSE 8080
+EXPOSE 3434
 USER node
 WORKDIR /usr/src/app
 COPY --chown=node:node --from=build /usr/src/app/node_modules /usr/src/app/node_modules
