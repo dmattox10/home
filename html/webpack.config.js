@@ -11,7 +11,8 @@ module.exports = {
     static: './dist',
     hot: true,
     port: 3434,
-    compress: true
+    compress: true,
+    allowedHosts: ['danielmattox.com']
   },
   module: {
     rules: [
