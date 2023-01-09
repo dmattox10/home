@@ -12,7 +12,7 @@ module.exports = {
     hot: true,
     port: 3434,
     compress: true,
-    allowedHosts: ['danielmattox.com']
+    public: 'danielmattox.com'
   },
   module: {
     rules: [
