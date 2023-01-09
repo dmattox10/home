@@ -5,7 +5,7 @@ services:
   portfolio:
     build:
       context: ./html/
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
       args:
       - PORT=${PORT}
     image: portfolio
