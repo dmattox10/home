@@ -4,7 +4,7 @@ version: '3.7'
 services:
   portfolio:
     build:
-      context: ./portfolio/
+      context: ./html/
       dockerfile: dockerfile
       args:
       - PORT=${PORT}
