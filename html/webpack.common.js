@@ -31,7 +31,12 @@ const path = require('path');
           'css-loader',
           'sass-loader'
         ]
-      }
+      },
+      {
+      test: /\.html$/i,
+      loader: "html-loader",
+    },
+
     ]
    },
    output: {
