@@ -12,29 +12,31 @@ const path = require('path');
        title: 'Production',
      }),
    ],
+   module: {
+    rules: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env'],
+              },
+            },
+          },
+        {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
+    ]
+   },
    output: {
      filename: 'bundle.js',
      path: path.resolve(__dirname, 'dist'),
      clean: true,
-   },
-   rules: [
-    {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-    {
-    test: /\.scss$/,
-    use: [
-      'style-loader',
-      'css-loader',
-      'sass-loader'
-    ]
-  }
-]
+   }
 };
