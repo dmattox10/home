@@ -6,14 +6,8 @@ services:
     build:
       context: ./html/
       dockerfile: Dockerfile
-      args:
-      - PORT=${PORT}
     image: portfolio
     hostname: portfolio
     container_name: portfolio
-    command: yarn start
-    volumes:
-      - ./:/usr/app
-      - /usr/app/node_modules
     ports:
-      - "${PORT}:${PORT}"
+      - "8080:80"

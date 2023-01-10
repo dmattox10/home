@@ -11,4 +11,4 @@ RUN apt-get install nginx -y
 COPY --from=build /usr/src/app/dist/ /var/www/html
 EXPOSE 80
 # COPY --chown=node:node --from=build /usr/src/app/node_modules /usr/src/app/node_modules
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
