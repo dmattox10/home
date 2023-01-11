@@ -4,14 +4,7 @@ const path = require('path');
 
  module.exports = {
 
-   entry: {
-     app: './src/index.js',
-   },
-   plugins: [
-     new HtmlWebpackPlugin({
-       title: 'Production',
-     }),
-   ],
+   entry: './src/index.js',
    module: {
     rules: [
         {
