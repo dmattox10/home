@@ -168,5 +168,10 @@
             <h1 class="modal-text">Are you certain you don't want to download my Resume before you leave? It appears three times on this page including <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()'>here</a>&nbsp;and you haven't clicked it once!</h1>
         </div>
     </div>
+    <script>
+        function toggleFileDownloaded() {
+        window.fileDownloaded = true;
+        }
+    </script>
   </body>
 </html>
