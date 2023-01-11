@@ -3,9 +3,6 @@ import './SCSS/index.scss'
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
-console.log(sections);
-console.log(navLinks);
-
 function updateActiveLink() {
   for (const section of sections) {
     const boundingRect = section.getBoundingClientRect();

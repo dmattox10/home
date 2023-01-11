@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import sass from 'rollup-plugin-sass';
-import html from 'rollup-plugin-bundle-html';
+import html2 from 'rollup-plugin-html2';
 import serve from 'rollup-plugin-serve';
 
 export default {
@@ -17,10 +17,13 @@ export default {
       insert: true,
       output: './dist/bundle.css',
     }),
-    html({
-      include: '**/*.html',
-      fileName: './dist/index.html',
+    html2({
       template: './src/index.html',
+      fileName: 'index.html',
+      // inject: 'head',
+      // externals: [
+      //   { type: 'js', file: 'index.js', pos: 'before'}
+      // ]
     }),
     serve({
       contentBase: './dist',
