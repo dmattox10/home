@@ -3,6 +3,20 @@ import './SCSS/index.scss'
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
+
+
+const links = document.querySelectorAll("[data-part1][data-part2][data-part3]");
+for (const link of links) {
+  const attrs = link.dataset;
+  link.setAttribute(
+    "href",
+    `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}?subject=${attrs.subject}`
+  );
+  link.textContent = `${attrs.part1}@${attrs.part2}.${attrs.part3}`;
+}
+
+
+
 function updateActiveLink() {
   for (const section of sections) {
     const boundingRect = section.getBoundingClientRect();
@@ -24,10 +38,14 @@ function toggleFileDownloaded() {
 updateActiveLink()
 
 const modal = document.querySelector(".modal");
-// const closeButton = document.querySelector(".close-button");
+const closeArea = document.querySelector(".close");
 
 function toggleModal() {
   modal.classList.toggle("show-modal");
+}
+
+function hideModal() {
+  modal.classList.remove("show-modal");
 }
 
 function windowOnClick(event) {
@@ -36,7 +54,7 @@ function windowOnClick(event) {
   }
 }
 
-// closeButton.addEventListener("click", toggleModal);
+closeArea.addEventListener("click", hideModal);
 window.addEventListener("click", windowOnClick);
 
 window.addEventListener('scroll', updateActiveLink);
