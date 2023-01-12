@@ -114,7 +114,10 @@
                                     <h3>Full-Stack Web Developer.</h3>
                                 </span>
                                 <span class="layer-1 anim">
-                                    <h4>I've no pen to sell you, but since you're here, take this&nbsp; <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent">Resume!</a></h4>
+                                    <h4>I've no pen to sell you, but since you're here, take this&nbsp;</h4>
+                                </span>
+                                <span class="layer-1 anim">
+                                    <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resume!</a>
                                 </span>
                             </div>
                         </section>
@@ -148,7 +151,7 @@
                     <div id="secondary" class="">
                         <div class="right">
                             <div class="email">
-                                <a href="mailto:dmattox10@gmail.com">dmattox10@gmail.com</a>
+                                <a href="" data-part1="dmattox10" data-part2="gmail" data-part3="com" data-subject="Hire me!"></a>
                             </div>
                         </div>
                     </div>
@@ -164,8 +167,10 @@
         </div>
     </div>
     <div class="modal">
-        <div class="modal-content clearfix">
-            <h1 class="modal-text">Are you certain you don't want to download my Resume before you leave? It appears three times on this page including <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()'>here</a>&nbsp;and you haven't clicked it once!</h1>
+        <div class="modal-container close">
+            <div class="modal-content clearfix">
+                <h1 class="modal-text">Are you certain you don't want to download my Resume before you leave? It appears three times on this page including <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()'>here</a>&nbsp;and you haven't clicked it once!</h1>
+            </div>
         </div>
     </div>
   </body>
