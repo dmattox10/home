@@ -17,6 +17,8 @@ $nord13: #EBCB8B;
 $nord14: #A3BE8C;
 $nord15: #B48EAD;
 
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
 $section-height: 100vh;
 $num-sections: 6;
 $side-height: $num-sections * $section-height;
@@ -52,12 +54,12 @@ section {
     height: $section-height;
 }
 
-.resume {
-  color: $nord6;
-  position: absolute;
-  left: 55%;
-  bottom: 15%;
-}
+// .resume {
+//   color: $nord6;
+//   position: absolute;
+//   right: 33%;
+//   bottom: 33%;
+// }
 
 article {
   &:nth-child(1) {
@@ -106,6 +108,66 @@ h4 {
   position: absolute;
   top: 0;
   margin-top: 2rem;
+}
+
+.text-col {
+  p {
+    text-align: justify;
+    margin: 0px 0px 15px;
+  }
+}
+
+.img-col {
+  float: right;
+  position: relative;
+  max-width: 300px;
+  .wrapper {
+      box-shadow: 0 10px 30px -15px var(--navy-shadow);
+      transition: $transition;
+      display: block;
+      position: relative;
+      width: 100%;
+      border-radius: 4px;
+      background-color: $nord10;
+      &::before {
+          top: 0px;
+          left: 0px;
+          background-color: $nord8;
+          mix-blend-mode: screen;
+    }
+    .image-wrapper {
+        position: relative;
+        border-radius: var(--border-radius);
+        mix-blend-mode: multiply;
+        filter: grayscale(100%) contrast(1);
+        transition: $transition;
+    }
+  }
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+    li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        // font-family: var(--font-mono);
+        // font-size: var(--fz-xs);
+      }
+    &::before {
+      content: "▹";
+      position: absolute;
+      left: 0px;
+      color: $nord10;
+      // font-size: var(--fz-sm);
+      line-height: 12px;
+    }
 }
 
 .layer-1 {
@@ -252,7 +314,7 @@ li.nav-item > a.nav-link:focus {
   height: 40%;
 }
 
-.grid:after {
+.grid::after {
   content: '';
   display: block;
   clear: both;
@@ -262,7 +324,7 @@ li.nav-item > a.nav-link:focus {
   *zoom: 1;
 }
 
-.cf:after {
+.cf::after {
   content: '';
   display: block;
   clear: both;
@@ -1083,8 +1145,19 @@ $fade-motions: (
   }
 }
 
+.inner {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	gap: 50spx;
+}
 
 @media only screen and (max-width: 482px) {
+  // .resume {
+  //   // color: $nord6;
+  //   // position: absolute;
+  //   // left: 55%;
+  //   bottom: 35%;
+  // }
   .col {
     display: none;
   }

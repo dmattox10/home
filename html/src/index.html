@@ -50,12 +50,12 @@
                                     <li class="nav-item">
                                         <a class="nav-link active" href="#about">About</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link false" href="#work">My Work</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link false" href="#experience">Experience</a>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                         <a class="nav-link false" href="#resume">Resume</a>
                                     </li>
@@ -114,35 +114,69 @@
                                     <h3>Full-Stack Web Developer.</h3>
                                 </span>
                                 <span class="layer-1 anim">
-                                    <h4>I've no pen to sell you, but since you're here, take this&nbsp;</h4>
-                                </span>
-                                <span class="layer-1 anim">
-                                    <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resume!</a>
+                                    <h4>I've no pen to sell you, but since you're here, take this&nbsp;<a href='assets/Resume.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resume!</a>
+                                    </h4>
                                 </span>
                             </div>
                         </section>
                         <section id="about">
                             <div class="section-body">
                                 <h2 class="heading">About Me</h2>
-        
+                                <div class="inner">
+                                    <div class="text-col">
+                                        <div>
+                                            <p>
+                                                Hello! I'm Daniel, and I love to make stuff of all kinds, but most of it is Code or 3D printed things. From taking everything apart and making my myspace page shine, to software, hardware, and physibles, and beyond!
+                                            </p>
+                                            <p>
+                                                Today after spending 15 years of my professional time fixing computers and my hobby time learning to code I've transitioned career paths to Full Stack Web Development, after completing Lambda School and open to opportunities missing "Have you tried restarting it?"
+                                            </p>
+                                            <p>
+                                                Here are some of the technologies that I use most often:
+                                            </p>
+                                        </div>
+                                        <ul class="skills-list">
+                                            <li>JavaScript (ES6+)</li>
+                                            <li>React</li>
+                                            <li>Node.js</li>
+                                            <li>Express</li>
+                                            <li>MongoDB</li>
+                                            <li>MySQL</li>
+                                        </ul>
+                                    </div>
+                                    <div class="img-col">
+                                        <div class="wrapper">
+                                            <div class="image-wrapper">
+                                                <div style="max-width: 500px; display: block;">
+                                                    <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height='500' width='500' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E" style="max-width: 100%; display: block; position: static;">
+                                                </div>
+                                                <div aria-hidden="true" data-placeholder-image="" style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(232, 232, 232); position: absolute; inset: 0px; object-fit: cover;"></div>
+                                                <picture>
+                                                    <img style="object-fit: cover; opacity: 1;" src="assets/me.jpg" alt="headshot">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
-                        <section id="work">
+                        <!-- <section id="work">
                             <div class="section-body">
                                 <h2 class="heading">My Projects</h2>
-                
+                                <p>My projects text</p>
                             </div>
                         </section>
                         <section id="experience">
                             <div class="section-body">
                                 <h2 class="heading">My Work Experience</h2>
-
+                                <p>My work experience text</p>
                             </div>
-                        </section>
+                        </section> -->
                         <section id="resume">
                             <div class="section-body">
                                 <h2 class="heading">Download My Resume</h2>
-
+                                <p>You know you want to take it with you.</p>
+                                <a href='assets/Resume.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resume!</a>
                             </div>
                         </section>
                     </div>
@@ -169,7 +203,7 @@
     <div class="modal">
         <div class="modal-container close">
             <div class="modal-content clearfix">
-                <h1 class="modal-text">Are you certain you don't want to download my Resume before you leave? It appears three times on this page including <a href='Resume.pdf' download='Daniel-Mattox-Resume.pdf' onClick='toggleFileDownloaded()'>here</a>&nbsp;and you haven't clicked it once!</h1>
+                <h1 class="modal-text">Are you certain you don't want to download my Resume before you leave? It appears three times on this page including <a href='assets/Resume.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()'>here</a>&nbsp;and you haven't clicked it once!</h1>
             </div>
         </div>
     </div>

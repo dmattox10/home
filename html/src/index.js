@@ -29,7 +29,6 @@ function updateActiveLink() {
   }
 }
 
-let lastScrollY = 0;
 
 function toggleFileDownloaded() {
   window.fileDownloaded = true;
@@ -59,6 +58,8 @@ window.addEventListener("click", windowOnClick);
 
 window.addEventListener('scroll', updateActiveLink);
 
+let lastScrollY = 0;
+
 window.addEventListener('scroll', () => {
   if (
     window.scrollY < lastScrollY &&
@@ -66,9 +67,6 @@ window.addEventListener('scroll', () => {
     !window.fileDownloaded &&
     !window.modalShown
   ) {
-    // const event = new Event('scrolling_up');
-    // window.dispatchEvent(event);
-    // console.log('scroll')        
     modal.classList.add("show-modal");
     window.modalShown = true;
   }
