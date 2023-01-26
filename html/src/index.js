@@ -1,9 +1,8 @@
 import './SCSS/index.scss'
+import { gsap } from "gsap"
 
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
-
-
 
 const links = document.querySelectorAll("[data-part1][data-part2][data-part3]");
 for (const link of links) {
@@ -14,8 +13,6 @@ for (const link of links) {
   );
   link.textContent = `${attrs.part1}@${attrs.part2}.${attrs.part3}`;
 }
-
-
 
 function updateActiveLink() {
   for (const section of sections) {
@@ -28,7 +25,6 @@ function updateActiveLink() {
     }
   }
 }
-
 
 function toggleFileDownloaded() {
   window.fileDownloaded = true;
@@ -76,3 +72,24 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scrolling_up', function() {
   toggleModal();
 });
+
+// const section = document.querySelector("#about");
+// const backgroundImage = document.querySelector(".background-image");
+// const overlay = document.querySelector(".overlay");
+// const overlayTextContainer = document.querySelector(".overlay-text-container");
+
+// // Create a timeline
+// const tl = gsap.timeline({ defaults: { ease: "linear" } });
+
+// // Add animations to the timeline
+// tl.to(backgroundImage, { y: "-20%", duration: 2 });
+// tl.to(overlay, { y: "-10%", duration: 2 }, "-=2");
+// tl.to(overlayTextContainer, { y: "-5%", duration: 2 }, "-=2");
+
+// // Create a scrollTrigger
+// gsap.utils.scrollTrigger.create({
+//   trigger: section,
+//   start: "top top",
+//   end: "bottom bottom",
+//   animation: tl,
+// });
