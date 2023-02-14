@@ -14,7 +14,6 @@
     <title>Daniel Mattox | Full Stack Web Developer | I make stuff</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
         <div class="App">
             <div class="grid">
@@ -103,7 +102,7 @@
                 <article class="module desktop-10 tablet-10">
                     <div>
                         <section id="home">
-                            <div class="section-body">
+                            <div class="section-content">
                                 <span class="layer-1 anim">
                                     <h1>Hi, I'm</h1>
                                 </span>
@@ -120,7 +119,7 @@
                             </div>
                         </section>
                         <!-- <section id="about">
-                            <div class="section-body">
+                            <div class="section-content">
                                 <h2 class="heading">About Me</h2>
                                 <img src="assets/me.jpg" alt="me.jpg, boom! headshot!" class="background-image">
                                 <div class="overlay">
@@ -142,7 +141,7 @@
                         </section>
                         
                         <section id="about">
-                            <div class="section-body">
+                            <div class="section-content">
                                 <h2 class="heading">About Me</h2>
                                 <div class="inner">
                                     <div class="text-col">
@@ -183,62 +182,77 @@
                             </div>
                         </section> -->
                         <section id="work">
-                            <div class="section-body">
+                            <div class="section-content">
                                 <h2 class="heading">My Projects</h2>
-                                <article>
                                     <ul class="cards_">
-                                        <!-- <li class="cards_item_">
-                                        <div class="card_">
-                                            <div class="card_image_ card_image-mm"></div>
-                                            <div class="card_content_">
-                                            <div class="card_title_">Miracle Messages Impact Map (Full-stack/Front-end)</div>
-                                            <p class="card_text_">description</p>
-                                            <button class="btn btn-block card_btn_">Link</button>
-                                            </div>
-                                        </div>
-                                        </li> -->
-                                        <li class="cards_item_">
-                                            <div class="card_">
-                                                <div class="card_image_ card_image-magic"></div>
-                                                <div class="card_content_">
-                                                <div class="card_title_">React Sorting Hat (Front-end)</div>
-                                                <p class="card_text_"></p>
-                                                <button class="btn btn-transparent">Link</button>
-                                                </div>
-                                            </div>
-                                            </li>
+                                        <div class="box-callout">
                                             <li class="cards_item_">
                                                 <div class="card_">
-                                                    <div class="card_image_ card_image-pw"></div>
+                                                    <figure>
+                                                        <img src="assets/img/magic.png" alt="" class="img-responsive">
+                                                        <div class="box-title"><h3>Flip Card Sorting Hat</h3></div>
+                                                        <figcaption>
+                                                            <h3>React, ContextAPI, Docker</h3>
+                                                            <p>Custom CSS, Dynamic Components, Responsive Design</p>
+                                                        </figcaption>
+                                                    </figure>
                                                     <div class="card_content_">
-                                                    <div class="card_title_">React Password Checker hits XoN API (Front-end)</div>
-                                                    <p class="card_text_"></p>
-                                                    <button class="btn btn-transparent">Link</button>
+                                                        <div class="card_title_">Front End</div>
+                                                        <p class="card_text_">Answer questions to determine your hogwarts house.</p>
+                                                        <button class="btn btn-transparent">Link</button>
                                                     </div>
                                                 </div>
-                                                </li>
-                                                <li class="cards_item_">
-                                                    <div class="card_">
-                                                        <div class="card_image_ card_image-tacotaco"></div>
-                                                        <div class="card_content_">
-                                                        <div class="card_title_">TacoTaco Node/Express API serving TacoFancy Data via MySQL (Back-End)</div>
-                                                        <p class="card_text_"></p>
+                                            </li>
+                                        </div>
+                                        <div class="box-callout">
+                                            <li class="cards_item_">
+                                                <div class="card_">
+                                                    <figure>
+                                                        <img src="assets/img/tacotaco.png" alt="" class="img-responsive">
+                                                        <div class="box-title"><h3>Taco Taco</h3></div>
+                                                        <figcaption>
+                                                            <h3>Express, MySQL, Docker</h3>
+                                                            <p>Microservice API practice, JWT</p>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <div class="card_content_">
+                                                        <div class="card_title_">Back End</div>
+                                                        <p class="card_text_">Serving the TacoFancy github data RESTfully. Recently rewritten from MongoDB.</p>
                                                         <button class="btn btn-transparent">Link</button>
-                                                        </div>
                                                     </div>
-                                                    </li>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <div class="box-callout">
+                                            <li class="cards_item_">
+                                                <div class="card_">
+                                                    <figure>
+                                                        <img src="assets/img/pw.png" alt="" class="img-responsive">
+                                                        <div class="box-title"><h3>Password Checker</h3></div>
+                                                        <figcaption>
+                                                            <h3>React, ContextAPI, Docker/h3>
+                                                            <p>Bootstrap, Bootswatch, Responsive Design</p>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <div class="card_content_">
+                                                        <div class="card_title_">Front End</div>
+                                                        <p class="card_text_">Securely checks the XoN API for whether or not a password has been leaked in a data breach.</p>
+                                                        <button class="btn btn-transparent">Link</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </div>
                                     </ul>
-                                </article>
-                            </div>
+                                </div>
                         </section>
                         <!-- <section id="experience">
-                            <div class="section-body">
+                            <div class="section-content">
                                 <h2 class="heading">My Work Experience</h2>
                                 <p>My work experience text</p>
                             </div>
                         </section> -->
                         <section id="resume">
-                            <div class="section-body">
+                            <div class="section-content">
                                 <h2 class="heading">Download My Resume</h2>
                                 <p>You know you want to take it with you.</p>
                                 <a href='assets/Resume.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resume!</a>
