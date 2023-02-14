@@ -116,6 +116,12 @@ h4 {
 //   vertical-align: middle;
 // }
 
+// img {
+//   opacity: 0.4;
+//   -webkit-transform: scale3d(1.1, 1.1, 1);
+//   transform: scale3d(1.1, 1.1, 1);
+// }
+
 .text-col {
   p {
     text-align: justify;
@@ -1045,8 +1051,8 @@ span.anim {
 }
 
 .btn {
-  background-color: white;
-  border: 1px solid #cccccc;
+  background-color: transparent;
+  border: 1px solid $nord4;
   color: #696969;
   padding: 0.5rem;
   text-transform: lowercase;
@@ -1055,6 +1061,7 @@ span.anim {
   display: block;
   width: 100%;
 }
+
 .cards_ {
   display: flex;
   flex-wrap: wrap;
@@ -1067,8 +1074,8 @@ span.anim {
   padding: 1rem;
 }
 .card_ {
-  background-color: white;
-  border-radius: 0.25rem;
+  background-color: #5E81AC;
+  border-radius: 1rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -1087,8 +1094,8 @@ span.anim {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   filter: contrast(70%);
   overflow: hidden;
   position: relative;
@@ -1097,11 +1104,11 @@ span.anim {
 .card_image_::before {
   content: "";
   display: block;
-  padding-top: 56.25%;
+  padding-top: 50%;
 }
-.card_image-mm {
-  background-image: url('assets/img/mm.png');
-}
+// .card_image-mm {
+//   background-image: url('assets/img/mm.png');
+// }
 .card_image-magic {
   background-image: url('assets/img/magic.png');
 }
@@ -1112,7 +1119,7 @@ span.anim {
   background-image: url('assets/img/tacotaco.png');
 }
 .card_title_ {
-  color: #696969;
+  color: $nord6;
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 2px;
