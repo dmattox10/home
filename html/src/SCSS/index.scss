@@ -51,7 +51,7 @@ body {
 }
 
 section {
-    height: $section-height;
+    min-height: $section-height;
 }
 
 // .resume {
@@ -289,7 +289,7 @@ li.nav-item > a.nav-link:focus {
 .module {
   float: left;
   width: 98%;
-  margin-left: 2%;
+  margin-left: 1%;
   // background-color: $nord0;
   padding: 1em;
   min-height: 60px;
@@ -481,6 +481,22 @@ $offset: calc($total / 3);
     color: $nord6 !important;
   }
 }
+
+.button {font-size: 0px;min-width: 100px;min-height: 30px;}
+.button::after {font-size: 16px;}
+.button::after {
+  content: "Visit Deployment";
+  }
+  .button:hover::after {
+   content: "Try it out!";
+  }
+  
+  .button:hover {
+  background-color: $nord14;
+  border: 0px solid $nord8;
+  color: $nord6 !important;
+  }
+
 .heading {
     display: flex;
     -moz-box-align: center;
@@ -510,7 +526,7 @@ $offset: calc($total / 3);
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 100vh; /* set the height of the container */
+  min-height: 100vh; /* set the height of the container */
   overflow: hidden;
 
   span {
@@ -848,7 +864,7 @@ span.anim {
     /* for parallax scroll effect */
     section {
         perspective: 1px;
-        height: 100vh;
+        min-height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -1049,12 +1065,149 @@ span.anim {
   border: 1px solid #cccccc;
   color: #696969;
   padding: 0.5rem;
-  text-transform: lowercase;
+  // text-transform: lowercase;
 }
 .btn-block {
   display: block;
   width: 100%;
 }
+
+
+.box-title {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+}
+
+.box-callout {
+  width: 100%;
+  // margin: 15px 10px;
+  padding: 0;
+}
+
+.box-callout figure {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.box-callout figure img {
+  width: 100%;
+}
+
+.box-callout h3 {
+  margin: 0 auto;
+  font-size: 1.4em !important;
+  color: $nord6 !important;
+  text-align: center !important;
+  margin: 10px !important;
+  text-transform: uppercase;
+}
+
+.box-callout p {
+  font-size: 1em !important;
+  color: #444 !important;
+  text-align: center !important;
+}
+
+.box-callout figcaption p {
+  color: $nord6 !important;
+}
+
+.box-callout figcaption ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.box-callout figcaption ul {
+  visibility: visible;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.box-callout figcaption ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.box-callout h4 {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.box-callout figcaption {
+  padding: 10%;
+  color: transparent;
+  background-color: transparent;
+  position: absolute;
+  z-index: 996;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 0;
+  margin: 0 0 !important;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-callout figure:hover figcaption {
+  visibility: visible;
+  color: $nord6;
+  background: rgba($nord9, 0.9);
+  /* Primary color, can be changed via colors.css */
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-callout figure:hover figcaption ul li a:hover {
+  color: rgba(49, 49, 49, .97);
+}
+
+.box-callout figure img {
+  -webkit-transform: scale(1.1) rotate(0) translateY(0);
+  -moz-transform: scale(1.1) rotate(0) translateY(0);
+  -o-transform: scale(1.1) rotate(0) translateY(0);
+  -ms-transform: scale(1.1) rotate(0) translateY(0);
+  transform: scale(1.1) rotate(0) translateY(0);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.box-callout figure:hover img {
+  -webkit-transform: scale(1.3) rotate(0) translateY(12px);
+  -moz-transform: scale(1.3) rotate(0) translateY(12px);
+  -o-transform: scale(1.3) rotate(0) translateY(12px);
+  -ms-transform: scale(1.3) rotate(0) translateY(12px);
+  transform: scale(1.3) rotate(0) translateY(12px);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .cards_ {
   display: flex;
   flex-wrap: wrap;
@@ -1067,8 +1220,8 @@ span.anim {
   padding: 1rem;
 }
 .card_ {
-  background-color: white;
-  border-radius: 0.25rem;
+  background-color: $nord9;
+  border-radius: 1rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
@@ -1087,8 +1240,8 @@ span.anim {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   filter: contrast(70%);
   overflow: hidden;
   position: relative;
@@ -1099,21 +1252,10 @@ span.anim {
   display: block;
   padding-top: 56.25%;
 }
-.card_image-mm {
-  background-image: url('assets/img/mm.png');
-}
-.card_image-magic {
-  background-image: url('assets/img/magic.png');
-}
-.card_image-pw {
-  background-image: url('assets/img/pw.png');
-}
-.card_image-tacotaco {
-  background-image: url('assets/img/tacotaco.png');
-}
+
 .card_title_ {
-  color: #696969;
-  font-size: 1.25rem;
+  color: $nord6;
+  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1121,8 +1263,8 @@ span.anim {
 .card_text_ {
   flex: 1 1 auto;
   font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
 }
 
 $fade-duration: 500ms;
