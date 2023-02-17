@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
+    "build": "rm dist.zip && zip -r dist.zip dist && rm -rf dist && rollup -c",
     "dev": "rollup -c -w"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@rollup/plugin-url": "^8.0.1",
