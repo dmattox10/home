@@ -59,7 +59,7 @@ let lastScrollY = 0;
 window.addEventListener('scroll', () => {
   if (
     window.scrollY < lastScrollY &&
-    window.scrollY > 300 &&
+    window.scrollY > 500 &&
     !window.fileDownloaded &&
     !window.modalShown
   ) {
