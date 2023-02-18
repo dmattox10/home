@@ -760,6 +760,29 @@ span.anim {
 //   }
 // }
 
+@supports (-webkit-text-stroke: 1px) {
+  .white {
+    -webkit-text-stroke: 1px $nord9;
+    color: $nord4;
+    text-shadow:
+        3px 3px 0 $nord9,
+      -1px -1px 0 $nord9,  
+       1px -1px 0 $nord9,
+       -1px 1px 0 $nord9,
+        1px 1px 0 $nord9;
+  .blue {
+    -webkit-text-stroke: 1px white;
+    color: $nord9;
+    text-shadow: 
+        3px 3px 0 #fff,
+      -1px -1px 0 #fff,  
+       1px -1px 0 #fff,
+       -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+  }
+  }
+}
+
 .paused {
   animation-play-state: paused;
 }

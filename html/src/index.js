@@ -56,22 +56,26 @@ window.addEventListener('scroll', updateActiveLink);
 
 let lastScrollY = 0;
 
-window.addEventListener('scroll', () => {
-  if (
-    window.scrollY < lastScrollY &&
-    window.scrollY > 500 &&
-    !window.fileDownloaded &&
-    !window.modalShown
-  ) {
-    modal.classList.add("show-modal");
-    window.modalShown = true;
-  }
-  lastScrollY = window.scrollY;
-});
+if(!/Mobi/i.test(navigator.userAgent)){
+  window.addEventListener('scroll', () => {
+    if (
+      window.scrollY < lastScrollY &&
+      window.scrollY > 800 &&
+      !window.fileDownloaded &&
+      !window.modalShown
+    ) {
+      modal.classList.add("show-modal");
+      window.modalShown = true;
+    }
+    lastScrollY = window.scrollY;
+  });
+  
+  window.addEventListener('scrolling_up', function() {
+    toggleModal();
+  });
+}
 
-window.addEventListener('scrolling_up', function() {
-  toggleModal();
-});
+
 
 // const section = document.querySelector("#about");
 // const backgroundImage = document.querySelector(".background-image");
