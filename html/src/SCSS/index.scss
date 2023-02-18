@@ -110,6 +110,7 @@ h4 {
   margin-top: 2rem;
 }
 
+<<<<<<< HEAD
 // img {
 //   height: auto;
 //   max-width: 100%;
@@ -122,6 +123,8 @@ h4 {
 //   transform: scale3d(1.1, 1.1, 1);
 // }
 
+=======
+>>>>>>> test
 .text-col {
   p {
     text-align: justify;
@@ -767,6 +770,29 @@ span.anim {
 //     filter: blur(0px);
 //   }
 // }
+
+@supports (-webkit-text-stroke: 1px) {
+  .white {
+    -webkit-text-stroke: 1px $nord9;
+    color: $nord4;
+    text-shadow:
+        3px 3px 0 $nord9,
+      -1px -1px 0 $nord9,  
+       1px -1px 0 $nord9,
+       -1px 1px 0 $nord9,
+        1px 1px 0 $nord9;
+  .blue {
+    -webkit-text-stroke: 1px white;
+    color: $nord9;
+    text-shadow: 
+        3px 3px 0 #fff,
+      -1px -1px 0 #fff,  
+       1px -1px 0 #fff,
+       -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+  }
+  }
+}
 
 .paused {
   animation-play-state: paused;
