@@ -17,6 +17,10 @@ $nord13: #EBCB8B;
 $nord14: #A3BE8C;
 $nord15: #B48EAD;
 
+.nav-link.active {
+  color: $nord14 !important;
+}
+
 $transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
 $section-height: 100vh;
