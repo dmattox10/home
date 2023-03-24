@@ -1,5 +1,4 @@
 import './SCSS/index.scss'
-import { gsap } from "gsap"
 
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -13,6 +12,13 @@ for (const link of links) {
   );
   link.textContent = `${attrs.part1}@${attrs.part2}.${attrs.part3}`;
 }
+
+// const navItems = document.querySelectorAll('.nav-item')
+// const menuToggle = document.getElementById('navbarSupportedContent')
+// const bsCollapse = new bootstrap.Collapse(menuToggle)
+// navItems.forEach((l) => {
+//     l.addEventListener('click', () => { bsCollapse.toggle() })
+// })
 
 function updateActiveLink() {
   for (const section of sections) {
@@ -32,48 +38,48 @@ function toggleFileDownloaded() {
 
 updateActiveLink()
 
-const modal = document.querySelector(".modal");
-const closeArea = document.querySelector(".close");
+// // // const modal = document.querySelector(".modal");
+// // // const closeArea = document.querySelector(".close");
 
-function toggleModal() {
-  modal.classList.toggle("show-modal");
-}
+// // function toggleModal() {
+// //   modal.classList.toggle("show-modal");
+// // }
 
-function hideModal() {
-  modal.classList.remove("show-modal");
-}
+// // function hideModal() {
+// //   modal.classList.remove("show-modal");
+// // }
 
-function windowOnClick(event) {
-  if (event.target === modal) {
-    toggleModal();
-  }
-}
+// // function windowOnClick(event) {
+// //   if (event.target === modal) {
+// //     toggleModal();
+// //   }
+// // }
 
-closeArea.addEventListener("click", hideModal);
-window.addEventListener("click", windowOnClick);
+// closeArea.addEventListener("click", hideModal);
+// window.addEventListener("click", windowOnClick);
 
 window.addEventListener('scroll', updateActiveLink);
 
-let lastScrollY = 0;
+// let lastScrollY = 0;
 
-if(!/Mobi/i.test(navigator.userAgent)){
-  window.addEventListener('scroll', () => {
-    if (
-      window.scrollY < lastScrollY &&
-      window.scrollY > 800 &&
-      !window.fileDownloaded &&
-      !window.modalShown
-    ) {
-      modal.classList.add("show-modal");
-      window.modalShown = true;
-    }
-    lastScrollY = window.scrollY;
-  });
+// if(!/Mobi/i.test(navigator.userAgent)){
+//   window.addEventListener('scroll', () => {
+//     if (
+//       window.scrollY < lastScrollY &&
+//       window.scrollY > 800 &&
+//       !window.fileDownloaded &&
+//       !window.modalShown
+//     ) {
+//       modal.classList.add("show-modal");
+//       window.modalShown = true;
+//     }
+//     lastScrollY = window.scrollY;
+//   });
   
-  window.addEventListener('scrolling_up', function() {
-    toggleModal();
-  });
-}
+//   window.addEventListener('scrolling_up', function() {
+//     toggleModal();
+//   });
+// }
 
 
 

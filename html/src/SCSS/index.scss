@@ -1396,7 +1396,10 @@ $fade-motions: (
     width: 98%;
   }
   .cards_item_ {
-    width: 50%;
+    width: 100%;
+  }
+  .cards_item {
+    width: 100%;
   }
   .card_image_::before {
     padding-top: 66.6%;
@@ -1442,6 +1445,9 @@ $fade-motions: (
   }
   .cards_item_ {
     width: 33.3333%;
+  }
+  .cards_item {
+    width: 40%;
   }
 }
 

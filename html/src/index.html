@@ -12,6 +12,17 @@
     <link rel="apple-touch-icon" href="logo192.png" />
     <link rel="manifest" href="manifest.json" />
     <title>Daniel Mattox | Full Stack Web Developer | I make stuff</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBVB351KH5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-YBVB351KH5');
+    </script>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -47,15 +58,12 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ms-auto">
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link active" href="#about">About</a>
-                                    </li> -->
                                     <li class="nav-item">
-                                        <a class="nav-link false" href="#work">My Work</a>
+                                        <a class="nav-link active" href="#scheduling">Scheduling</a>
                                     </li>
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link false" href="#experience">Experience</a>
-                                    </li> -->
+                                    <li class="nav-item">
+                                        <a class="nav-link false" href="#testimonials">Client Reviews</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link false" href="#resume">Resume</a>
                                     </li>
@@ -119,69 +127,54 @@
                                 </span>
                             </div>
                         </section>
-                        <!-- <section id="about">
+                        <section id="about">
                             <div class="section-body">
-                                <h2 class="heading">About Me</h2>
-                                <img src="assets/me.jpg" alt="me.jpg, boom! headshot!" class="background-image">
-                                <div class="overlay">
-                                    <div class="overlay-text-container">
-                                        <p class="overlay-text">Hello! I'm Daniel, and I love to make stuff of all kinds, but most of it is Code or 3D printed things. From taking everything apart and making my myspace page shine, to software, hardware, and physibles, and beyond!</p>
-                                        <p class="overlay-text">Today after spending 15 years of my professional time fixing computers and my hobby time learning to code I've transitioned career paths to Full Stack Web Development, after completing Lambda School and open to opportunities missing "Have you tried restarting it?"</p>
-                                        <p class="overlay-text">Here are some of the technologies that I use most often:</p>
-                                        <ul class="skills-list">
-                                            <li>JavaScript (ES6+)</li>
-                                            <li>React</li>
-                                            <li>Node.js</li>
-                                            <li>Express</li>
-                                            <li>MongoDB</li>
-                                            <li>MySQL</li>
-                                        </ul>
-                                    </div>
+                                <h2 class="heading">How to work with me:</h2>
+                                <div>
+                                    <ul class="cards_">
+                                        <li class="cards_item">
+                                        <div class="card_">
+                                            <div class="box-callout">
+                                                <figure>
+                                                  <img src="assets/img/fiverr.png" alt="" class="img-responsive">
+                                                  <div class="box-title"><h3>View My Fiverr Gigs</h3></div>
+                                                  <figcaption>
+                                                    <h3>5 Star Rating</h3>
+                                                    <p>Work through Fiverr is guaranteed through their platform</p>
+                                                  </figcaption>
+                                                </figure>
+                                              </div>
+                                            <div class="card_content_">
+                                            <div class="card_title_">IN/OUT of Office hours 9-5 Eastern M-F</div>
+                                            <p class="card_text_">Students: $30/50, Pros & B2B $55/$80</p>
+                                            <button onclick="location.href='https://fiverr.com/danielmattox'" type="button" class="btn btn-block card_btn_ button">Order through Fiverr</button>
+                                            </div>
+                                        </div>
+                                        </li>
+                                        <li class="cards_item">
+                                            <div class="card_">
+                                                <div class="box-callout">
+                                                    <figure>
+                                                      <img src="assets/img/fiverr.png" alt="" class="img-responsive">
+                                                      <div class="box-title"><h3>COMING SOON: Invoice and Schedule</h3></div>
+                                                      <figcaption>
+                                                        <h3>Lower Rates</h3>
+                                                        <p>Zoom time is paid ahead either way. It's recommended to order through Fiverr first.</p>
+                                                      </figcaption>
+                                                    </figure>
+                                                  </div>
+                                                <div class="card_content_">
+                                                <div class="card_title_">IN/OUT of Office hours 9-5 Easter M-F</div>
+                                                <p class="card_text_">Students: $25/45, Pros & B2B $50/$75</p>
+                                                <button onclick="location.href='#'" type="button" class="btn btn-block card_btn_ button">Visit Deployment</button>
+                                                </div>
+                                            </div>
+                                            </li>
+                                    </ul>
+              
                                 </div>
                             </div>
                         </section>
-                        
-                        <section id="about">
-                            <div class="section-body">
-                                <h2 class="heading">About Me</h2>
-                                <div class="inner">
-                                    <div class="text-col">
-                                        <div>
-                                            <p>
-                                                Hello! I'm Daniel, and I love to make stuff of all kinds, but most of it is Code or 3D printed things. From taking everything apart and making my myspace page shine, to software, hardware, and physibles, and beyond!
-                                            </p>
-                                            <p>
-                                                Today after spending 15 years of my professional time fixing computers and my hobby time learning to code I've transitioned career paths to Full Stack Web Development, after completing Lambda School and open to opportunities missing "Have you tried restarting it?"
-                                            </p>
-                                            <p>
-                                                Here are some of the technologies that I use most often:
-                                            </p>
-                                        </div>
-                                        <ul class="skills-list">
-                                            <li>JavaScript (ES6+)</li>
-                                            <li>React</li>
-                                            <li>Node.js</li>
-                                            <li>Express</li>
-                                            <li>MongoDB</li>
-                                            <li>MySQL</li>
-                                        </ul>
-                                    </div>
-                                    <div class="img-col">
-                                        <div class="wrapper">
-                                            <div class="image-wrapper">
-                                                <div style="max-width: 500px; display: block;">
-                                                    <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height='500' width='500' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E" style="max-width: 100%; display: block; position: static;">
-                                                </div>
-                                                <div aria-hidden="true" data-placeholder-image="" style="opacity: 0; transition: opacity 500ms linear 0s; background-color: rgb(232, 232, 232); position: absolute; inset: 0px; object-fit: cover;"></div>
-                                                <picture>
-                                                    <img style="object-fit: cover; opacity: 1;" src="assets/me.jpg" alt="headshot">
-                                                </picture>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section> -->
                         <section id="work">
                             <div class="section-body">
                                 <h2 class="heading">My Projects</h2>
@@ -249,16 +242,16 @@
                                 </div>
                             </div>
                         </section>
-                        <!-- <section id="experience">
+                        <section id="testimonials">
                             <div class="section-body">
-                                <h2 class="heading">My Work Experience</h2>
-                                <p>My work experience text</p>
+                                <h2 class="heading">Client Testimonials Section Coming Soon!</h2>
+                                <p>This section will contain the reviews from Fiverr.</p>
                             </div>
-                        </section> -->
+                        </section>
                         <section id="resume">
                             <div class="section-body">
                                 <h2 class="heading">Download My Resume</h2>
-                                <p>This is what you came here for!</p>
+                                <p>I am open to full time offers currently:</p>
                                 <a href='assets/DMattox.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">💎&nbsp;Resume!&nbsp;💎</a>
                             </div>
                         </section>
@@ -283,18 +276,11 @@
             </div>
         </div>
     </div>
-    <div class="modal">
-        <div class="modal-container close">
-            <div class="modal-content clearfix">
-                <h1 class="modal-text">Are you certain you don't want to download my Resume before you leave? It appears three times on this page including <a href='assets/DMattox.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()'>here</a>&nbsp;and you haven't clicked it once!</h1>
-            </div>
-        </div>
-    </div>
-    <script>
+    <!-- <script>
         function toggleFileDownloaded() {
         window.fileDownloaded = true;
         }
-    </script>
+    </script> -->
   </body>
 </html>
 
