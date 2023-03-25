@@ -494,7 +494,31 @@ $offset: calc($total / 3);
   border: 0px solid $nord8;
   color: $nord6 !important;
   }
+  .fiverr-button::after {
+    content: "Order via Fiverr";
+    }
+    .fiverr-button:hover::after {
+     content: "Go!";
+    }
+    
+    .fiverr-button:hover {
+    background-color: $nord14;
+    border: 0px solid $nord8;
+    color: $nord6 !important;
+    }
 
+    .my-button::after {
+      content: "Schedule & Order Here";
+      }
+      .my-button:hover::after {
+       content: "Coming Soon!";
+      }
+      
+      .my-button:hover {
+      background-color: $nord14;
+      border: 0px solid $nord8;
+      color: $nord6 !important;
+      }
 .heading {
     display: flex;
     -moz-box-align: center;
@@ -1099,6 +1123,14 @@ span.anim {
   position: absolute;
   text-align: center;
   top: 40%;
+  color: $nord0;
+  -webkit-text-fill-color: $nord6; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $nord0;
+}
+
+.title {
+  text-align: center;
 }
 
 .box-callout {
@@ -1229,12 +1261,17 @@ span.anim {
   transition: all 0.4s ease-in-out;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .cards_ {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: space-evenly;
 }
 .cards_item_ {
   display: flex;
