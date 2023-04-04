@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2E3440" />
     <meta
       name="description"
@@ -12,7 +12,9 @@
     <link rel="apple-touch-icon" href="logo192.png" />
     <link rel="manifest" href="manifest.json" />
     <title>Daniel Mattox | Full Stack Web Developer | I make stuff</title>
-    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBVB351KH5"></script>
     <script>
@@ -22,8 +24,6 @@
 
         gtag('config', 'G-YBVB351KH5');
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -38,7 +38,7 @@
                                     <img class="logo nav-link" href="#home" src="data:image/png;base64,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" alt="logo">
                                 </div>
                             </a>
-                            <button class="navbar-toggler game-menu" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler game-menu" data-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                                 <span class="navbar-toggler-icon">
                                     <p>Y</p>
@@ -69,7 +69,7 @@
                                         <a class="nav-link false" href="#testimonials">Client Reviews</a>
                                     </li>-->
                                     <li class="nav-item">
-                                        <a class="nav-link false" href="#resume">Resume</a>
+                                        <a class="nav-link false" href="#resume">Resumé</a>
                                     </li>
                                 </ul>
                             </div>
@@ -126,7 +126,7 @@
                                     <h3 class="blue"><div class="white">Full-Stack Web Developer.</div></h3>
                                 </span>
                                 <span class="layer-1 anim">
-                                    <h4 style="color:#D8DEE9;">I've no pen to sell you, but since you're here, take this&nbsp;<a href='assets/DMattox.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resume!</a>
+                                    <h4 style="color:#D8DEE9;">I've no pen to sell you, but since you're here, take this&nbsp;<a href='assets/DMattox.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">Resumé !</a>
                                     </h4>
                                 </span>
                             </div>
@@ -257,7 +257,7 @@
                             <div class="section-body">
                                 <h2 class="heading">Download My Resume</h2>
                                 <p>I am open to full time offers currently:</p>
-                                <a href='assets/DMattox.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">💎&nbsp;Resume!&nbsp;💎</a>
+                                <a href='assets/DMattox.pdf' download='dmattox10-Full-Stack-Resume.pdf' onClick='toggleFileDownloaded()' class="btn-transparent resume">💎&nbsp;Resumé!&nbsp;💎</a>
                             </div>
                         </section>
                     </div>
