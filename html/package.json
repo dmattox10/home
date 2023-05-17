@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm dist.zip && zip -r dist.zip dist && rm -rf dist && rollup -c",
-    "dev": "rollup -c -w"
+    "backup": "zip -r dist.zip dist",
+    "build": "yarn clean && yarn backup && yarn clear && yarn dev",
+    "clean": "rm dist.zip",
+    "clear": "rm -rf dist",
+    "deploy": "yarn build && yarn move && docker restart swag",
+    "move": "sudo \\cp -Rv dist/* ../../../swag/www/",
+    "dev": "rollup -c"
   },
   "keywords": [],
   "author": "",

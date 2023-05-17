@@ -149,6 +149,10 @@ h4 {
   }
 }
 
+#or {
+  width: 10%;
+}
+
 .skills-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
@@ -508,10 +512,10 @@ $offset: calc($total / 3);
     }
 
     .my-button::after {
-      content: "Schedule & Order Here";
+      content: "Schedule & Order via Calendly";
       }
       .my-button:hover::after {
-       content: "Coming Soon!";
+       content: "Go!";
       }
       
       .my-button:hover {
@@ -1122,11 +1126,12 @@ span.anim {
   width: 100%;
   position: absolute;
   text-align: center;
-  top: 40%;
-  color: $nord0;
-  -webkit-text-fill-color: $nord6; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $nord0;
+  top: 1.4rem;
+  color: $nord10;
+  font-size: 2.5rem;
+  // -webkit-text-fill-color: $nord6; /* Will override color (regardless of order) */
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: $nord0;
 }
 
 .title {
@@ -1136,7 +1141,9 @@ span.anim {
 .box-callout {
   width: 100%;
   // margin: 15px 10px;
+  background-color: $nord6;
   padding: 0;
+  flex-grow: 1;
 }
 
 .box-callout figure {
@@ -1144,6 +1151,7 @@ span.anim {
   overflow: hidden;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .box-callout figure img {
@@ -1276,6 +1284,7 @@ span.anim {
 .cards_item_ {
   display: flex;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 .card_ {
   background-color: $nord9;
@@ -1283,6 +1292,7 @@ span.anim {
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow: hidden;
 }
 .card_:hover .card_image_ {
@@ -1293,6 +1303,7 @@ span.anim {
   flex: 1 1 auto;
   flex-direction: column;
   padding: 1rem;
+  flex-grow: 0;
 }
 .card_image_ {
   background-position: center center;
@@ -1317,12 +1328,14 @@ span.anim {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-top: auto;
 }
 .card_text_ {
   flex: 1 1 auto;
   font-size: 0.875rem;
   line-height: 1.3;
   margin-bottom: 1rem;
+  margin-top: auto;
 }
 
 $fade-duration: 500ms;
@@ -1390,6 +1403,10 @@ $fade-motions: (
   #secondary {
     display: none;
   }
+  #or {
+    display: none;
+  }
+  
 }
 
 
@@ -1437,9 +1454,13 @@ $fade-motions: (
   }
   .cards_item {
     width: 100%;
+    margin-bottom: 1rem;
   }
   .card_image_::before {
     padding-top: 66.6%;
+  }
+  #or {
+    display: none;
   }
 }
 
